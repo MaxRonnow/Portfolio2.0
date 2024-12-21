@@ -1,4 +1,8 @@
+
+
 import Image from "next/image";
+import atomview from "./components/atomview"
+import Atomview from "./components/atomview";
 
 export default function Home() {
   return (
@@ -48,6 +52,7 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+        <Atomview></Atomview>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
