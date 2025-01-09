@@ -6,11 +6,11 @@ export default function Home() {
     <>
 
 
-        <div className="fixed">
+        <div className="fixed h-screen w-full">
           <Atomview ></Atomview>
         </div>
         <div className="absolute inset-0 h-screen w-full backdrop-blur-lg bg-[#ffffff1d] [mask-image:linear-gradient(to_bottom,black_0%_2rem,transparent_2rem_calc(100vh-2rem),black_calc(100vh-2rem)_100%),linear-gradient(to_left,black_0%_2rem,transparent_2rem_calc(100vw-2rem),black_calc(100vw-2rem)_100%)] [mask-size:100%_100%] [mask-repeat:no-repeat] [mask-composite:add] pointer-events-none"></div>
-      <div className="absolute w-full h-screen flex justify-center items-center">
+      <div className="absolute w-full h-screen flex justify-center items-center pointer-events-none">
         <div className="border-solid border-2 border-zinc-500 w-[calc(100vw-4rem)] h-[calc(100vh-4rem)] z-10 pointer-events-none"></div>
       </div>
 
