@@ -22,7 +22,7 @@ function Atomview(props: ThreeElements["mesh"]) {
       <ambientLight intensity={Math.PI / 2} />
       <CustomGeometryParticles count={2000} shape="sphere"/>
       {/* @ts-ignore */}
-      <OrbitControls autoRotate/> 
+      <OrbitControls autoRotate autoRotateSpeed={0.2}/> 
     </Canvas>
     <div>{RadialComponent(n, l , 1, a0)}</div>
     </>
@@ -78,7 +78,7 @@ function Atomview(props: ThreeElements["mesh"]) {
             itemSize={3}
           />
         </bufferGeometry>
-        <pointsMaterial size={0.015} color="#5786F5" sizeAttenuation depthWrite={false} />
+        <pointsMaterial size={0.005} color="#5786F5" sizeAttenuation depthWrite={false} />
         
       </points>
     );
