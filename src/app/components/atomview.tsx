@@ -3,6 +3,7 @@ import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import React, { useRef, useState, useMemo } from "react";
 import { Canvas, useFrame, ThreeElements } from "@react-three/fiber";
+import { exp, factorial, re, } from "mathjs"
 
 const n = 3;
 const l = 2;
@@ -14,34 +15,19 @@ const a0 = 1;
 function Atomview(props: ThreeElements["mesh"]) {
   return (
     
+    
+
+    <>
     <Canvas camera={{ position: [1.5, 1.5, 1.5] }}>
       <ambientLight intensity={Math.PI / 2} />
       <CustomGeometryParticles count={2000} shape="sphere"/>
       {/* @ts-ignore */}
       <OrbitControls autoRotate/> 
     </Canvas>
+    <div>{RadialComponent(n, l , 1, a0)}</div>
+    </>
   );
 }
-
-function PointCloud() {
-  // This reference gives us direct access to our points
-  const points = useRef(0);
-
-  // You can see that, like our mesh, points also takes a geometry and a material,
-  // but a specific material => pointsMaterial
-  return (
-    <points ref={points}>
-      <sphereGeometry args={[1, 48, 48]} />
-      <pointsMaterial color="#5786F5" size={0.015} sizeAttenuation />
-    </points>
-    
-  );
-};
-/* 
-function radialFunction(n, l, r, a0){
-  const laguerre = 
-} */
-
 
 
   function CustomGeometryParticles(props: any) {
@@ -97,6 +83,38 @@ function radialFunction(n, l, r, a0){
       </points>
     );
   };
+
+function RadialComponent(n: number, l: number, r: number, a0: number) {
+  
+  const constant_component = Math.sqrt( (2 / (n * a0) ) ** 3 * factorial(n - l - 1) / (2 * n * factorial(n + l)) );
+
+  const exponential_decay = exp(-1 * (r / (n * a0)));
+
+  const power_term = ((2 * r) / (n * a0)) ** l;
+
+  const lagpol = laguerre((n - l - 1), (2 * l + 1), (2 * r) / (n * a0))
+
+  return constant_component;
+}
+
+function laguerre(n: number, a: number, x: number) {
+  switch(n){
+    case 0:
+      return 1;
+      
+    case 1:
+      return (-1 * x + a + 1);
+    
+    case 2:
+      return ((1 / 2) * (x ** 2 - 2 * (a + 2) * x + (a + 1) * (a + 2)));
+
+    case 3: 
+      return ((1 / 6) * (-1 * x ** 3 + 3 * (a + 3) * x ** 2 - 3 * (a + 2) * (a + 3) * x + (a + 1) * (a + 2) * (a + 3)));
+
+    case 4:
+      return 
+  }
+}
 
 
 export default Atomview;

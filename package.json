@@ -12,6 +12,7 @@
     "@react-three/drei": "3.11.1-alpha.1",
     "@react-three/fiber": "^9.0.0-alpha.8",
     "@types/three": "0.172.0",
+    "mathjs": "^14.0.1",
     "next": "15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
