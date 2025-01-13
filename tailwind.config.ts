@@ -12,6 +12,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ['var(--font-geist)'],
+        mono: ['var(--font-geist-mono)'],
+        anton: ['var(--font-anton)'],
+        title: ['var(--font-raleway)']
+      },
     },
   },
   plugins: [],

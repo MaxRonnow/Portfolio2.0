@@ -3,7 +3,7 @@ import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import React, { useRef, useState, useMemo } from "react";
 import { Canvas, useFrame, ThreeElements } from "@react-three/fiber";
-import { exp, factorial, re, } from "mathjs"
+import { exp, factorial, i, re, } from "mathjs"
 
 const n = 3;
 const l = 2;
@@ -86,6 +86,8 @@ function Atomview(props: ThreeElements["mesh"]) {
 
 function RadialComponent(n: number, l: number, r: number, a0: number) {
   
+  const p = 2 * r / (n * a0);
+
   const constant_component = Math.sqrt( (2 / (n * a0) ) ** 3 * factorial(n - l - 1) / (2 * n * factorial(n + l)) );
 
   const exponential_decay = exp(-1 * (r / (n * a0)));
@@ -94,7 +96,7 @@ function RadialComponent(n: number, l: number, r: number, a0: number) {
 
   const lagpol = laguerre((n - l - 1), (2 * l + 1), (2 * r) / (n * a0))
 
-  return constant_component;
+  return constant_component * exponential_decay * power_term * lagpol;
 }
 
 function laguerre(n: number, a: number, x: number) {
@@ -112,9 +114,30 @@ function laguerre(n: number, a: number, x: number) {
       return ((1 / 6) * (-1 * x ** 3 + 3 * (a + 3) * x ** 2 - 3 * (a + 2) * (a + 3) * x + (a + 1) * (a + 2) * (a + 3)));
 
     case 4:
-      return 
+      return 2
+
+    default:
+      return -1
   }
 }
 
+
+function angularFunction(m: number, l: number, theta: number, phi: number){
+
+  const constant_factor = ((-1) ** m) * (Math.sqrt(((2 * l + 1) / (4 * Math.PI)) * ((factorial(l - m)) / (factorial(l + m)))));
+
+  const legendre_pol = legendre(m, l, theta);
+
+  {/* @ts-ignore */}
+  const exponent: number = re(i * m * phi);
+
+  const exponential = Math.E ** exponent;
+
+
+}
+
+function legendre(m: number, l: number, theta: number){
+
+}
 
 export default Atomview;

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Anton, Raleway } from "next/font/google";
 import "./globals.css";
 import Atomview from "./components/atomview";
 import Link from "next/link";
@@ -12,6 +12,15 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const anton = Anton({
+  variable: "--font-anton",
+  weight: "400"
+});
+
+const raleway = Raleway({
+  variable: "--font-raleway",
 });
 
 export const metadata: Metadata = {
@@ -27,24 +36,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${raleway.variable} antialiased`}
       >
-
         <div>
-        <div className="fixed h-screen w-full">
-        <Atomview></Atomview>
-      </div>
-      <div className="fixed top-80 left-32 text-xl w-auto h-auto flex flex-col z-20">
-        <Link href={"/"}>Home</Link>
-        <Link href={"/aboutme"}>About me</Link>
-        <Link href={"/projects"}>Projects</Link>
-        <Link href={"/3d"}>3D</Link>
-        <Link href={"/contact"}>Contact</Link>
-      </div>
-      {children}
+          <div className="fixed h-screen w-full bg-black">
+            <Atomview></Atomview>
+          </div>
+          <div className="fixed top-72 left-20 text-xl w-auto h-auto flex flex-col z-20">
+            <Link href={"/"}>Home</Link>
+            <Link href={"/aboutme"}>About me</Link>
+            <Link href={"/projects"}>Projects</Link>
+            <Link href={"/3d"}>3D</Link>
+            <Link href={"/contact"}>Contact</Link>
+          </div>
+          {children}
         </div>
-        
-        
       </body>
     </html>
   );

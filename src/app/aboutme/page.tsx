@@ -1,7 +1,7 @@
 function Aboutme() {
   return (
     <div className="backdrop-blur-sm min-w-full min-h-screen bg-[#8686861d] flex items-center ">
-      <div className="h-auto max-w-[50%] p-9 border-solid border-2 border-white rounded-xl">
+      <div className="h-auto max-w-[50%] p-9 border-solid border-2 border-neutral-400 bg-[#383737e1]">
         <h1 className=" text-3xl">A passion for software</h1>
         <p className="text-lg p-5">
           My goal with the software that I write is that is solves some kind of
@@ -13,7 +13,7 @@ function Aboutme() {
 
         <p className="text-lg p-5">
           I am 21 years old, studying data science at Åbo Akademi University in
-          Turku, Finland.{" "}
+          Turku, Finland.
         </p>
       </div>
     </div>
