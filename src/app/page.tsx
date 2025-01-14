@@ -15,7 +15,7 @@ export default function Home() {
 
       <div className="absolute top-20 left-20 pointer-events-none">
         <h1 className="flex text-6xl font-title font-thin">  Max Rönnow</h1>   
-        <div>I am a Programmer, designer, 3D artist</div>
+        <div className="font-title font-thin">I am a Programmer, designer, 3D artist</div>
       </div>
 
       

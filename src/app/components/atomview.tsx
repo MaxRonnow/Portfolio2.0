@@ -3,16 +3,15 @@ import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import React, { useRef, useState, useMemo } from "react";
 import { Canvas, useFrame, ThreeElements } from "@react-three/fiber";
-import { e } from "mathjs";
-/* import { exp, factorial, i, re, sqrt, pow } from "mathjs"; */
 const math = require('mathjs');
 
 function Atomview(props: ThreeElements["mesh"]) {
   return (
     <>
-      <Canvas camera={{ position: [1.5, 1.5, 1.5] }}>
+      
+      <Canvas camera={{ position: [1, 1, 1] }}>
         <ambientLight intensity={Math.PI / 2} />
-        <CustomGeometryParticles count={500000} shape="atom" />
+        <CustomGeometryParticles count={30000} shape="atom" />
         {/* @ts-ignore */}
         <OrbitControls autoRotate autoRotateSpeed={0.2} />
       </Canvas>
@@ -32,19 +31,19 @@ function CustomGeometryParticles(props: any) {
 
     if (shape === "atom") {
       
-      const n = 4;
+      const n = 3;
       const l = 2;
       const m = 0;
 
       for (let i = 0; i < count; i++) {
 
-        let x = Math.random() * (2 + 2) - 2;
-        let y = Math.random() * (2 + 2) - 2;
-        let z = Math.random() * (2 + 2) - 2;
+        let x = Math.random() * (1 + 1) - 1;
+        let y = Math.random() * (1 + 1) - 1;
+        let z = Math.random() * (1 + 1) - 1;
         
         let sphe = cartToSphe(x, y,z);
 
-        let prob = getElectronProbability(n, l, m, sphe[0], sphe[1], sphe[2])
+        let prob = getElectronProbability(n, l, m, sphe[0], sphe[1], sphe[2], 0.05)
 
         console.log(prob);
 
@@ -84,8 +83,8 @@ function CustomGeometryParticles(props: any) {
         />
       </bufferGeometry>
       <pointsMaterial
-        size={0.01}
-        color="#5786F5"
+        size={0.005}
+        color="#ffffff"
         sizeAttenuation
         depthWrite={false}
       />
@@ -146,20 +145,11 @@ function angularFunction(m: number, l: number, theta: number, phi: number) {
 
   const legendre_pol = legendre(m, l, theta);
 
-  
-  const exponent: number = math.re(math.exp(math.i * m * phi));
-
   const test = math.complex(0, m * phi)
 
   const test2 = math.pow(Math.E, test)
 
   const test3: number = test2.re;
-
-  
-
-  const exponential = Math.E ** (m * phi);
-
-  
 
   return constant_factor * legendre_pol * test3;
 
@@ -230,13 +220,14 @@ function getElectronProbability(
   m: number,
   r: number,
   theta: number,
-  phi: number
+  phi: number,
+  scale: number
 ) {
   const a0_scale_factor = 100;
   const a0 = a0_scale_factor * 5.29177210544;
 
   const wave_function =
-    RadialComponent(n, l, r, 0.2) * angularFunction(m, l, theta, phi);
+    RadialComponent(n, l, r, scale) * angularFunction(m, l, theta, phi);
 
   const probability = Math.abs(wave_function) ** 2;
 

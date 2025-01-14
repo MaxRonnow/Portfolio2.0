@@ -42,7 +42,7 @@ export default function RootLayout({
           <div className="fixed h-screen w-full bg-black">
             <Atomview></Atomview>
           </div>
-          <div className="fixed top-72 left-20 text-xl w-auto h-auto flex flex-col z-20">
+          <div className="fixed top-72 left-20 text-xl w-auto h-auto flex flex-col z-20 font-title font-thin">
             <Link href={"/"}>Home</Link>
             <Link href={"/aboutme"}>About me</Link>
             <Link href={"/projects"}>Projects</Link>
