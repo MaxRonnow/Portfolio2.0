@@ -8,7 +8,6 @@ const math = require('mathjs');
 function Atomview(props: ThreeElements["mesh"]) {
   return (
     <>
-      
       <Canvas camera={{ position: [1, 1, 1] }}>
         <ambientLight intensity={Math.PI / 2} />
         <CustomGeometryParticles count={30000} shape="atom" />
