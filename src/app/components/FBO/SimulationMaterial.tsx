@@ -1,8 +1,8 @@
-import simulationVertexShader from "./simulationVertexShader.glsl";
+import simulationVertexShader from './simulationVertexShader.glsl';
 import simulationFragmentShader from './simulationFragmentShader.glsl';
 import * as THREE from "three";
 
-const getRandomData = (width: number, height: number) => {
+const getRandomData = (width: number, height:number) => {
   // we need to create a vec4 since we're passing the positions to the fragment shader
   // data textures need to have 4 components, R, G, B, and A
   const length = width * height * 4 
@@ -25,7 +25,7 @@ const getRandomData = (width: number, height: number) => {
 }
 
 class SimulationMaterial extends THREE.ShaderMaterial {
-  constructor(size: number) {
+  constructor(size:number) {
     const positionsTexture = new THREE.DataTexture(
       getRandomData(size, size),
       size,

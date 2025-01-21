@@ -1,10 +1,10 @@
+'use client'  
 import { OrbitControls, useFBO } from "@react-three/drei";
 import { Canvas, useFrame, extend, createPortal } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
-import './scene.css';
 
-import SimulationMaterial from "./simulationMaterial";
+import SimulationMaterial from './SimulationMaterial';
 
 import vertexShader from "./vertexShader.glsl";
 import fragmentShader from "./fragmentShader.glsl";
@@ -55,10 +55,8 @@ const FBOParticles = () => {
     gl.render(scene, camera);
     gl.setRenderTarget(null);
 
-
-    /* @ts-ignore */
     points.current.material.uniforms.uPositions.value = renderTarget.texture;
-    /* @ts-ignore */
+
     simulationMaterialRef.current.uniforms.uTime.value = clock.elapsedTime;
   });
 
@@ -66,7 +64,6 @@ const FBOParticles = () => {
     <>
       {createPortal(
         <mesh>
-            {/* @ts-ignore */}
           <simulationMaterial ref={simulationMaterialRef} args={[size]} />
           <bufferGeometry>
             <bufferAttribute

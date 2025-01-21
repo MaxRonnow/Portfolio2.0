@@ -3,6 +3,7 @@ import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import React, { useRef, useState, useMemo } from "react";
 import { Canvas, useFrame, ThreeElements } from "@react-three/fiber";
+import Scene from "./galaxy/particles"
 const math = require('mathjs');
 
 function Atomview(props: ThreeElements["mesh"]) {
@@ -14,6 +15,7 @@ function Atomview(props: ThreeElements["mesh"]) {
         {/* @ts-ignore */}
         <OrbitControls autoRotate autoRotateSpeed={0.2} />
       </Canvas>
+      
     </>
   );
 }
