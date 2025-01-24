@@ -1,7 +1,8 @@
-import Link from "next/link";
-import Atomview from "./components/atomview";
+'use client'
+import { useQuantumStore } from './store/quantumStore'
 
 export default function Home() {
+  const { n, l, m } = useQuantumStore()
   return (
     <>
       
@@ -12,9 +13,12 @@ export default function Home() {
       </div>
 
 
-
+      <p className="absolute font-title font-thin top-10 right-12">
+          n = {n} &ensp; l = {l} &ensp; m = {m}
+        </p>
       <div className="absolute top-20 left-20 pointer-events-none">
-        <h1 className="flex text-6xl font-title font-thin">  Max Rönnow</h1>   
+        <h1 className="flex text-6xl font-title font-thin">Max Rönnow</h1>   
+        
         <div className="font-title font-thin">I am a Programmer, designer, 3D artist</div>
       </div>
 

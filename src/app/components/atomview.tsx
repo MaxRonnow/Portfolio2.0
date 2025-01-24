@@ -5,6 +5,7 @@ import React, { useRef, useState, useMemo } from "react";
 import { Canvas, useFrame, ThreeElements } from "@react-three/fiber";
 import Scene from "./galaxy/particles"
 const math = require('mathjs');
+import { useQuantumStore } from "../store/quantumStore";
 
 function Atomview(props: ThreeElements["mesh"]) {
   return (
@@ -22,6 +23,7 @@ function Atomview(props: ThreeElements["mesh"]) {
 
 function CustomGeometryParticles(props: any) {
   const { count, shape } = props;
+  const setQuantumNumbers = useQuantumStore((state) => state.setQuantumNumbers)
 
   // This reference gives us direct access to our points
   const points = useRef(0);
@@ -34,7 +36,9 @@ function CustomGeometryParticles(props: any) {
       
       const n = 3;
       const l = 2;
-      const m = 0;
+      const m = 1;
+
+      setQuantumNumbers(n, l, m);
 
       for (let i = 0; i < count; i++) {
 
@@ -76,6 +80,7 @@ function CustomGeometryParticles(props: any) {
   return (
     <points ref={points}>
       <bufferGeometry>
+        {/* @ts-ignore */}
         <bufferAttribute
           attach="attributes-position"
           count={particlesPosition.length / 3}
