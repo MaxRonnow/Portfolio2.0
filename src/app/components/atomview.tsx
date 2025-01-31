@@ -16,7 +16,7 @@ function Atomview(props: ThreeElements["mesh"]) {
         <ambientLight intensity={Math.PI / 2} />
         <AtomParticles key={`${n}-${l}-${m}`} count={30000} shape="atom" />
         {/* @ts-ignore */}
-        <OrbitControls autoRotate autoRotateSpeed={0.2} />
+        <OrbitControls autoRotate autoRotateSpeed={0.4} />
       </Canvas>
     </>
   );

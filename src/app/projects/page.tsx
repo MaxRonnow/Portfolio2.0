@@ -1,6 +1,6 @@
 function Projects(){
     return(
-        <div className="h-screen w-full backdrop-blur-sm bg-[#8686861d]">
+        <div className="h-screen w-full backdrop-blur-sm bg-[#8686861d] flex justify-center items-center">
             <div>Audio effects in rust</div>
             <div>Webshop in nextjs</div>
         </div>

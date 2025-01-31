@@ -51,6 +51,7 @@ const CustomGeometryParticles = (props:any) => {
   return (
     <points ref={points}>
       <bufferGeometry>
+        {/* @ts-ignore */}
         <bufferAttribute
           attach="attributes-position"
           count={particlesPosition.length / 3}
