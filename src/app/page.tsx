@@ -48,7 +48,7 @@ export default function Home() {
       >
         <div className="relative left-2 border-solid border-zinc-500 group-hover:border-white [border-width:0_3px_3px_0] h-4 w-4 [transform:rotate(-45deg)] [-webkit-transform:rotate(-45deg)]"></div>
       </button>
-      <div className="w-full h-auto absolute top-[88%] right-0 font-title font-thin text-center">
+      <div className="w-full h-auto absolute top-[88%] right-0 font-title font-thin text-center pointer-events-none">
         {orbitalIndex + 1} / 6
       </div>
 

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Anton, Raleway } from "next/font/google";
 import "./globals.css";
 import Atomview from "./components/atomview";
-import Link from "next/link";
+import NavMenu from "./components/nav-menu";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
+
   return (
     <html lang="en">
       <body
@@ -42,13 +45,7 @@ export default function RootLayout({
           <div className="fixed h-screen w-full bg-black">
             <Atomview></Atomview>
           </div>
-          <div className="fixed top-72 left-20 text-xl w-auto h-auto flex flex-col z-20 font-title font-thin">
-            <Link href={"/"}>Home</Link>
-            <Link href={"/aboutme"}>About me</Link>
-            <Link href={"/projects"}>Projects</Link>
-            <Link href={"/threeD"}>3D</Link>
-            <Link href={"/contact"}>Contact</Link>
-          </div>
+          <NavMenu></NavMenu>
           {children}
         </div>
       </body>
