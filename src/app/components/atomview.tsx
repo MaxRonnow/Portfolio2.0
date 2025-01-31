@@ -1,29 +1,30 @@
 "use client";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
-import React, { useRef, useState, useMemo } from "react";
+import React, { useRef, useState, useMemo, useEffect } from "react";
 import { Canvas, useFrame, ThreeElements } from "@react-three/fiber";
-import Scene from "./galaxy/particles"
-const math = require('mathjs');
+import Scene from "./galaxy/particles";
+const math = require("mathjs");
 import { useQuantumStore } from "../store/quantumStore";
 
 function Atomview(props: ThreeElements["mesh"]) {
+  const { n, l, m } = useQuantumStore();
+
   return (
     <>
       <Canvas camera={{ position: [1, 1, 1] }}>
         <ambientLight intensity={Math.PI / 2} />
-        <CustomGeometryParticles count={30000} shape="atom" />
+        <AtomParticles key={`${n}-${l}-${m}`} count={30000} shape="atom" />
         {/* @ts-ignore */}
         <OrbitControls autoRotate autoRotateSpeed={0.2} />
       </Canvas>
-      
     </>
   );
 }
 
-function CustomGeometryParticles(props: any) {
+function AtomParticles(props: any) {
   const { count, shape } = props;
-  const setQuantumNumbers = useQuantumStore((state) => state.setQuantumNumbers)
+  const { n, l, m } = useQuantumStore();
 
   // This reference gives us direct access to our points
   const points = useRef(0);
@@ -33,29 +34,28 @@ function CustomGeometryParticles(props: any) {
     const positions = new Float32Array(count * 3);
 
     if (shape === "atom") {
-      
-      const n = 3;
-      const l = 2;
-      const m = 1;
-
-      setQuantumNumbers(n, l, m);
-
       for (let i = 0; i < count; i++) {
-
         let x = Math.random() * (1 + 1) - 1;
         let y = Math.random() * (1 + 1) - 1;
         let z = Math.random() * (1 + 1) - 1;
-        
-        let sphe = cartToSphe(x, y,z);
 
-        let prob = getElectronProbability(n, l, m, sphe[0], sphe[1], sphe[2], 0.05)
+        let sphe = cartToSphe(x, y, z);
+
+        let prob = getElectronProbability(
+          n,
+          l,
+          m,
+          sphe[0],
+          sphe[1],
+          sphe[2],
+          0.05
+        );
 
         console.log(prob);
 
-        if(Math.random() < prob){
+        if (Math.random() < prob) {
           positions.set([x, y, z], i * 3);
         }
-        
       }
     }
 
@@ -75,7 +75,14 @@ function CustomGeometryParticles(props: any) {
     }
 
     return positions;
-  }, [count, shape]);
+  }, [count, shape, n, l, m]);
+
+  useEffect(() => {
+    if (points.current) {
+      /* @ts-ignore */
+      points.current.geometry.attributes.position.needsUpdate = true;
+    }
+  }, [particlesPosition]);
 
   return (
     <points ref={points}>
@@ -102,7 +109,8 @@ function RadialComponent(n: number, l: number, r: number, a0: number) {
   const p = (2 * r) / (n * a0);
 
   const constant_component = Math.sqrt(
-    ((2 / (n * a0)) ** 3 * math.factorial(n - l - 1)) / (2 * n * math.factorial(n + l))
+    ((2 / (n * a0)) ** 3 * math.factorial(n - l - 1)) /
+      (2 * n * math.factorial(n + l))
   );
 
   const exponential_decay = math.exp(-1 * (r / (n * a0)));
@@ -146,20 +154,19 @@ function angularFunction(m: number, l: number, theta: number, phi: number) {
   const constant_factor =
     (-1) ** m *
     Math.sqrt(
-      ((2 * l + 1) / (4 * Math.PI)) * (math.factorial(l - m) / math.factorial(l + m))
+      ((2 * l + 1) / (4 * Math.PI)) *
+        (math.factorial(l - m) / math.factorial(l + m))
     );
 
   const legendre_pol = legendre(m, l, theta);
 
-  const test = math.complex(0, m * phi)
+  const test = math.complex(0, m * phi);
 
-  const test2 = math.pow(Math.E, test)
+  const test2 = math.pow(Math.E, test);
 
   const test3: number = test2.re;
 
   return constant_factor * legendre_pol * test3;
-
-  
 }
 
 function legendre(m: number, l: number, theta: number) {
@@ -240,24 +247,22 @@ function getElectronProbability(
   return probability;
 }
 
-function cartToSphe(x: number, y: number, z: number){
-  
+function cartToSphe(x: number, y: number, z: number) {
   const r = Math.sqrt(x ** 2 + y ** 2 + z ** 2);
 
   const theta = Math.acos(z / r);
 
-  const phi = Math.sign(y) * Math.acos(x / (Math.sqrt(x ** 2 + y ** 2)));
-  
+  const phi = Math.sign(y) * Math.acos(x / Math.sqrt(x ** 2 + y ** 2));
+
   return [r, theta, phi];
 }
 
-function spheToCart(r: number, theta: number, phi: number){
+function spheToCart(r: number, theta: number, phi: number) {
   const x = r * Math.sin(theta) * Math.cos(phi);
   const y = r * Math.sin(theta) * Math.sin(phi);
   const z = r * Math.cos(theta);
 
   return [x, y, z];
 }
-
 
 export default Atomview;
