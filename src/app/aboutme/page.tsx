@@ -1,7 +1,7 @@
 function Aboutme() {
   return (
-    <div className="backdrop-blur-sm min-w-full min-h-screen  flex flex-col items-center font-title font-thin">
-      <div className="max-w-screen-lg mt-20">
+    <div className="backdrop-blur-sm min-w-full min-h-screen flex flex-col items-center font-title font-thin">
+      <div className="max-w-[90vw] mt-20">
         <h1 className=" text-3xl">A passion for software</h1>
         <p className="text-lg p-5">
           My goal with the software that I write is that is solves some kind of

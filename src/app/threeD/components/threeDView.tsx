@@ -1,5 +1,5 @@
 "use client";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, Camera } from "@react-three/fiber";
 import * as THREE from "three";
 import { OrbitControls } from "@react-three/drei";
 import Model from "./guitar";
@@ -18,8 +18,8 @@ function ThreeDView() {
 
   return (
     <div>
-      <div className="relative h-[60vh] w-[60vw] border-solid border-zinc-500 border-2">
-        <Canvas camera={{ position: [1, 1, 1] }}>
+      <div className="relative h-[70vh] w-[90vw] lg:w-[60vw] border-solid border-zinc-500 border-2">
+        <Canvas camera={{ position: [5, 5, 0] }}>
           <ambientLight intensity={Math.PI / 2} />
           <Model></Model>
           {/* @ts-ignore */}
