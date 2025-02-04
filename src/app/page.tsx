@@ -34,20 +34,23 @@ export default function Home() {
 
   return (
     <>
+      {/* Blurred border */}
       <div className="absolute inset-0 h-[100%] w-full backdrop-blur-sm bg-[#8686861d] [mask-image:linear-gradient(to_bottom,black_0%_2rem,transparent_2rem_calc(100vh-2rem),black_calc(100vh-2rem)_100%),linear-gradient(to_left,black_0%_2rem,transparent_2rem_calc(100%-2rem),black_calc(100%-2rem)_100%)] [mask-size:100%_100%] [mask-repeat:no-repeat] [mask-composite:add] pointer-events-none"></div>
 
+      {/* Orbital selection buttons */}
       <button
         onClick={handleLeftClick}
-        className="group border-solid border-2 border-zinc-500 hover:border-white rounded-full w-10 h-10 absolute top-[87%] left-[40%]"
+        className="group border-solid border-2 border-zinc-500 hover:border-white rounded-full w-10 h-10 absolute top-[87%] left-28 lg:left-[40%]"
       >
         <div className="relative left-3 border-solid border-zinc-500 group-hover:border-white [border-width:0_3px_3px_0] h-4 w-4 [transform:rotate(135deg)] [-webkit-transform:rotate(135deg)]"></div>
       </button>
       <button
         onClick={handleRightClick}
-        className="group border-solid border-2 border-zinc-500 hover:border-white rounded-full w-10 h-10 absolute top-[87%] right-[40%]"
+        className="group border-solid border-2 border-zinc-500 hover:border-white rounded-full w-10 h-10 absolute top-[87%] right-28 lg:right-[40%]"
       >
         <div className="relative left-2 border-solid border-zinc-500 group-hover:border-white [border-width:0_3px_3px_0] h-4 w-4 [transform:rotate(-45deg)] [-webkit-transform:rotate(-45deg)]"></div>
       </button>
+
       <div className="w-full h-auto absolute top-[88%] right-0 font-title font-thin text-center pointer-events-none">
         {orbitalIndex + 1} / 6
       </div>
@@ -60,10 +63,10 @@ export default function Home() {
         n = {orbitals[orbitalIndex][0]} &ensp; l = {orbitals[orbitalIndex][1]}{" "}
         &ensp; m = {orbitals[orbitalIndex][2]}
       </p>
-      <div className="absolute top-20 left-20 pointer-events-none">
-        <h1 className="flex text-6xl font-title font-thin">Max Rönnow</h1>
+      <div className="absolute top-20 left-14 lg:left-20 max-w-[80vw] h-auto pointer-events-none">
+        <h1 className="text-6xl font-title font-thin">Max Rönnow</h1>
 
-        <div className="font-title font-thin"></div>
+        <p className="font-title font-thin"></p>
       </div>
 
       {/* <div className="h-screen w-full backdrop-blur-lg bg-[#ffffff1d]"></div> */}

@@ -4,7 +4,6 @@ import "./globals.css";
 import Atomview from "./components/atomview";
 import NavMenu from "./components/nav-menu";
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -34,8 +33,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
-
   return (
     <html lang="en">
       <body
@@ -45,7 +42,10 @@ export default function RootLayout({
           <div className="fixed h-screen w-full bg-black">
             <Atomview></Atomview>
           </div>
-          <NavMenu></NavMenu>
+          <div className="">
+            <NavMenu></NavMenu>
+          </div>
+
           {children}
         </div>
       </body>
