@@ -34,7 +34,7 @@ const FBOParticles = () => {
     const length = size * size;
     const particles = new Float32Array(length * 3);
     for (let i = 0; i < length; i++) {
-      let i3 = i * 3;
+      const i3 = i * 3;
       particles[i3 + 0] = (i % size) / size;
       particles[i3 + 1] = i / size / size;
     }
@@ -55,8 +55,10 @@ const FBOParticles = () => {
     gl.render(scene, camera);
     gl.setRenderTarget(null);
 
+    /* @ts-ignore */
     points.current.material.uniforms.uPositions.value = renderTarget.texture;
 
+    /* @ts-ignore */
     simulationMaterialRef.current.uniforms.uTime.value = clock.elapsedTime;
   });
 
@@ -64,14 +66,17 @@ const FBOParticles = () => {
     <>
       {createPortal(
         <mesh>
+          {/* @ts-ignore */}
           <simulationMaterial ref={simulationMaterialRef} args={[size]} />
           <bufferGeometry>
+            {/* @ts-ignore */}
             <bufferAttribute
               attach="attributes-position"
               count={positions.length / 3}
               array={positions}
               itemSize={3}
             />
+            {/* @ts-ignore */}
             <bufferAttribute
               attach="attributes-uv"
               count={uvs.length / 2}
@@ -84,6 +89,7 @@ const FBOParticles = () => {
       )}
       <points ref={points}>
         <bufferGeometry>
+          {/* @ts-ignore */}
           <bufferAttribute
             attach="attributes-position"
             count={particlesPosition.length / 3}

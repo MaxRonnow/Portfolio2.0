@@ -22,9 +22,9 @@ const CustomGeometryParticles = (props:any) => {
       const theta = THREE.MathUtils.randFloatSpread(360); 
       const phi = THREE.MathUtils.randFloatSpread(360); 
 
-      let x = distance * Math.sin(theta) * Math.cos(phi)
-      let y = distance * Math.sin(theta) * Math.sin(phi);
-      let z = distance * Math.cos(theta);
+      const x = distance * Math.sin(theta) * Math.cos(phi)
+      const y = distance * Math.sin(theta) * Math.sin(phi);
+      const z = distance * Math.cos(theta);
 
       positions.set([x, y, z], i * 3);
     }

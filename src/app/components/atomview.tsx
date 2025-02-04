@@ -1,9 +1,9 @@
 "use client";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
-import React, { useRef, useState, useMemo, useEffect } from "react";
-import { Canvas, useFrame, ThreeElements } from "@react-three/fiber";
-import Scene from "./galaxy/particles";
+import React, { useRef, useMemo, useEffect } from "react";
+import { Canvas, ThreeElements } from "@react-three/fiber";
+/* import Scene from "./galaxy/particles";*/
 const math = require("mathjs");
 import { useQuantumStore } from "../store/quantumStore";
 
@@ -35,20 +35,20 @@ function AtomParticles(props: any) {
 
     if (shape === "atom") {
       for (let i = 0; i < count; i++) {
-        let x = Math.random() * (1 + 1) - 1;
-        let y = Math.random() * (1 + 1) - 1;
-        let z = Math.random() * (1 + 1) - 1;
+        const x = Math.random() * (1 + 1) - 1;
+        const y = Math.random() * (1 + 1) - 1;
+        const z = Math.random() * (1 + 1) - 1;
 
-        let sphe = cartToSphe(x, y, z);
+        const sphe = cartToSphe(x, y, z);
 
-        let prob = getElectronProbability(
+        const prob = getElectronProbability(
           n,
           l,
           m,
           sphe[0],
           sphe[1],
           sphe[2],
-          0.05
+          0.05,
         );
 
         console.log(prob);
@@ -66,9 +66,9 @@ function AtomParticles(props: any) {
         const theta = THREE.MathUtils.randFloatSpread(360);
         const phi = THREE.MathUtils.randFloatSpread(360);
 
-        let x = distance * Math.sin(theta) * Math.cos(phi);
-        let y = distance * Math.sin(theta) * Math.sin(phi);
-        let z = distance * Math.cos(theta);
+        const x = distance * Math.sin(theta) * Math.cos(phi);
+        const y = distance * Math.sin(theta) * Math.sin(phi);
+        const z = distance * Math.cos(theta);
 
         positions.set([x, y, z], i * 3);
       }
@@ -110,7 +110,7 @@ function RadialComponent(n: number, l: number, r: number, a0: number) {
 
   const constant_component = Math.sqrt(
     ((2 / (n * a0)) ** 3 * math.factorial(n - l - 1)) /
-      (2 * n * math.factorial(n + l))
+      (2 * n * math.factorial(n + l)),
   );
 
   const exponential_decay = math.exp(-1 * (r / (n * a0)));
@@ -155,7 +155,7 @@ function angularFunction(m: number, l: number, theta: number, phi: number) {
     (-1) ** m *
     Math.sqrt(
       ((2 * l + 1) / (4 * Math.PI)) *
-        (math.factorial(l - m) / math.factorial(l + m))
+        (math.factorial(l - m) / math.factorial(l + m)),
     );
 
   const legendre_pol = legendre(m, l, theta);
@@ -234,7 +234,7 @@ function getElectronProbability(
   r: number,
   theta: number,
   phi: number,
-  scale: number
+  scale: number,
 ) {
   const a0_scale_factor = 100;
   const a0 = a0_scale_factor * 5.29177210544;

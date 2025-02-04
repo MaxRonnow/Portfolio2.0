@@ -1,5 +1,4 @@
 "use client";
-import { number } from "mathjs";
 import { useQuantumStore } from "./store/quantumStore";
 import { useState, useEffect } from "react";
 
@@ -20,9 +19,9 @@ export default function Home() {
       orbitals[orbitalIndex][0],
       orbitals[orbitalIndex][1],
       orbitals[orbitalIndex][2],
-      orbitalIndex
+      orbitalIndex,
     );
-  }, [orbitalIndex, setQuantumNumbers]);
+  }, [orbitalIndex, setQuantumNumbers, orbitals]);
 
   function handleLeftClick() {
     setOrbitalIndex((prev) => (prev === 0 ? 5 : prev - 1));

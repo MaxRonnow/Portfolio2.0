@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Anton, Raleway } from "next/font/google";
+import { Geist, Geist_Mono, Raleway } from "next/font/google";
 import "./globals.css";
 import Atomview from "./components/atomview";
 import NavMenu from "./components/nav-menu";
@@ -14,13 +14,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const anton = Anton({
-  variable: "--font-anton",
-  weight: "400",
-});
-
 const raleway = Raleway({
   variable: "--font-raleway",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -36,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${raleway.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable} antialiased`}
       >
         <div>
           <div className="fixed h-screen w-full bg-black">
