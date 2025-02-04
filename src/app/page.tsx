@@ -21,7 +21,7 @@ export default function Home() {
       orbitals[orbitalIndex][2],
       orbitalIndex,
     );
-  }, [orbitalIndex, setQuantumNumbers, orbitals]);
+  }, [orbitalIndex, setQuantumNumbers]);
 
   function handleLeftClick() {
     setOrbitalIndex((prev) => (prev === 0 ? 5 : prev - 1));
