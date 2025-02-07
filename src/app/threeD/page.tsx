@@ -10,7 +10,7 @@ function ThreeD() {
           to make even better experiences. Here I have a couple of models
           I&apos;ve worked on.
         </p>
-        <div className="">
+        <div className="min-w-10 max-w-[90vw] lg:max-w-[70vw] flex justify-center">
           <ThreeDView></ThreeDView>
         </div>
       </div>
