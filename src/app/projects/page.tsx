@@ -4,7 +4,7 @@ function Projects() {
   return (
     <div className="h-screen w-full backdrop-blur-sm flex flex-col items-center font-title font-thin">
       <div className="min-w-10 max-w-[90vw] my-10">
-        <div className="my-2">
+        <div className="my-16">
           <h1 className="text-3xl py-3 my-3">Audio effects</h1>
           <p className="text-lg">
             A collection of audio effects written in rust, currently implemented
@@ -21,7 +21,7 @@ function Projects() {
             View on Github
           </button>
         </div>
-        <div className="my-6">
+        <div className="my-16">
           <h1 className="text-3xl">Webshop in nextjs</h1>
           <p className="text-lg">
             A webshop with a frontend in NextJS and a backend in Django
@@ -38,7 +38,7 @@ function Projects() {
           </button>
         </div>
 
-        <div className="my-6">
+        <div className="my-16">
           <h1 className="text-3xl">Portfolio page</h1>
           <p className="text-lg">
             This page is created using NextJS and React Three Fiber. It also
