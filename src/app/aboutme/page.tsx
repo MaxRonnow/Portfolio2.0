@@ -4,7 +4,7 @@ function Aboutme() {
       <div className="max-w-[90vw] lg:max-w-[60vw] mt-20">
         <h1 className=" text-3xl my-6">Who am I?</h1>
         <p className="text-lg my-6">
-          Hi, I'm Max. I am a 21 year old student currently studying computer
+          Hi, I&apos;m Max. I am a 21 year old student currently studying computer
           science. My interest are low level programming, 3D and music. I try to
           combine my interest in the software and the projects I make.
         </p>
@@ -22,7 +22,7 @@ function Aboutme() {
           three so called quantum numbers, n, l and m. You can see these numbers
           displayed in the top right corner on the homepage. The different
           orbitals represent different energy states of the electron. Per
-          quantum mechanics the electron doesn't have a specific location in
+          quantum mechanics the electron doesn&apos;t have a specific location in
           space, rather, the density of points represent the probability of
           finding the elctron there. I find nature to be
         </p>
