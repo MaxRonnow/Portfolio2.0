@@ -1,6 +1,6 @@
 import ThreeDView from "./components/threeDView";
 
-function ThreeD() {
+export default function ThreeD() {
   return (
     <div className="min-h-screen min-w-full backdrop-blur-sm flex flex-col justify-center items-center font-title font-thin">
       <div className="min-w-10 max-w-[90vw] lg:max-w-[70vw] my-10">
@@ -17,5 +17,3 @@ function ThreeD() {
     </div>
   );
 }
-
-export default ThreeD;
