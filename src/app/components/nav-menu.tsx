@@ -9,7 +9,7 @@ export default function NavMenu() {
       className={
         pathname === "/"
           ? "text-xl w-auto h-auto flex flex-col z-20 font-title font-thin fixed top-72 left-14 lg:left-20"
-          : "text-xl lg:w-auto p-2 lg:p-0 h-auto flex flex-row justify-evenly backdrop-blur-lg lg:bg-transparent bg-[#8686861d] lg:flex-col w-full z-20 font-title font-thin fixed lg:top-72 lg:backdrop-blur-none border-solid border-b-2 lg:border-0 border-white lg:left-20 "
+          : "text-xl lg:w-auto py-4 lg:p-0 h-auto flex flex-row justify-evenly backdrop-blur-lg lg:bg-transparent bg-[#8686861d] lg:flex-col w-full z-20 font-title font-thin fixed lg:top-72 lg:backdrop-blur-none border-solid border-b-2 lg:border-0 border-white lg:left-20 "
       }
     >
       <Link href={"/"} className={pathname === "/" ? "font-light" : ""}>
