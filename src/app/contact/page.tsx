@@ -14,7 +14,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="min-h-screen w-full backdrop-blur-sm flex flex-row justify-center font-title font-thin">
+    <div className="min-h-screen w-full backdrop-blur-sm flex flex-row justify-center font-title font-extralight">
       <div className="flex flex-col my-20 lg:min-w-[70vw] min-w-[90vw] justify-center items-center">
         <h1 className="text-3xl my-5">Contact</h1>
         <button

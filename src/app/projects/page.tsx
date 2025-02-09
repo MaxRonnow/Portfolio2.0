@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Projects() {
   return (
-    <div className="h-screen w-full backdrop-blur-sm flex flex-col items-center font-title font-thin">
+    <div className="h-screen w-full backdrop-blur-sm flex flex-col items-center font-title font-extralight">
       <div className="min-w-10 max-w-[90vw] lg:max-w-[70vw] my-10">
         <div className="my-16">
           <h1 className="text-3xl py-3 my-3">Audio effects</h1>

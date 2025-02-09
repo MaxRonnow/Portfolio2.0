@@ -19,7 +19,7 @@ export default function Home() {
       orbitals[orbitalIndex][0],
       orbitals[orbitalIndex][1],
       orbitals[orbitalIndex][2],
-      orbitalIndex,
+      orbitalIndex
     );
   }, [orbitalIndex, setQuantumNumbers]);
 
@@ -63,9 +63,7 @@ export default function Home() {
         &ensp; m = {orbitals[orbitalIndex][2]}
       </p>
       <div className="absolute top-20 left-14 lg:left-20 max-w-[80vw] h-auto pointer-events-none">
-        <h1 className="text-6xl font-title font-thin">Max Rönnow</h1>
-
-        <p className="font-title font-thin"></p>
+        <h1 className="text-6xl font-title font-extralight">Max Rönnow</h1>
       </div>
 
       {/* <div className="h-screen w-full backdrop-blur-lg bg-[#ffffff1d]"></div> */}

@@ -18,7 +18,7 @@ function ThreeDView() {
 
   return (
     <div>
-      <div className="relative h-[70vh] w-[90vw] lg:w-[60vw] border-solid border-zinc-500 border-2">
+      <div className="relative h-[70vh] w-[90vw] lg:w-[60vw] border-solid border-zinc-500 border-2 bg-black">
         <Canvas camera={{ position: [5, 5, 0] }}>
           <ambientLight intensity={Math.PI / 2} />
           <Model></Model>

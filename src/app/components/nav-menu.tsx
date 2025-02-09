@@ -8,34 +8,34 @@ export default function NavMenu() {
     <div
       className={
         pathname === "/"
-          ? "text-xl w-auto h-auto flex flex-col z-20 font-title font-thin fixed top-72 left-14 lg:left-20"
-          : "text-xl lg:w-auto py-4 lg:p-0 h-auto flex flex-row justify-evenly backdrop-blur-lg lg:bg-transparent bg-[#8686861d] lg:flex-col w-full z-20 font-title font-thin fixed lg:top-72 lg:backdrop-blur-none border-solid border-b-2 lg:border-0 border-white lg:left-20 "
+          ? "text-xl w-auto h-auto flex flex-col z-20 font-title font-extralight fixed top-72 left-14 lg:left-20"
+          : "text-xl lg:w-auto py-4 lg:p-0 h-auto flex flex-row justify-evenly backdrop-blur-lg lg:bg-transparent bg-[#8686861d] lg:flex-col w-full z-20 font-title font-extralight fixed lg:top-72 lg:backdrop-blur-none border-solid border-b-2 lg:border-0 border-white lg:left-20 "
       }
     >
-      <Link href={"/"} className={pathname === "/" ? "font-light" : ""}>
+      <Link href={"/"} className={pathname === "/" ? "font-normal" : ""}>
         Home
       </Link>
       <Link
         href={"/aboutme"}
-        className={pathname === "/aboutme" ? "font-light" : ""}
+        className={pathname === "/aboutme" ? "font-normal" : ""}
       >
         About me
       </Link>
       <Link
         href={"/projects"}
-        className={pathname === "/projects" ? "font-light" : ""}
+        className={pathname === "/projects" ? "font-normal" : ""}
       >
         Projects
       </Link>
       <Link
         href={"/threeD"}
-        className={pathname === "/threeD" ? "font-light" : ""}
+        className={pathname === "/threeD" ? "font-normal" : ""}
       >
         3D
       </Link>
       <Link
         href={"/contact"}
-        className={pathname === "/contact" ? "font-light" : ""}
+        className={pathname === "/contact" ? "font-normal" : ""}
       >
         Contact
       </Link>

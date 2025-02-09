@@ -1,6 +1,6 @@
 function Aboutme() {
   return (
-    <div className="backdrop-blur-sm min-w-full min-h-screen flex flex-col items-center font-title font-thin">
+    <div className="backdrop-blur-sm min-w-full min-h-screen flex flex-col items-center font-title font-extralight">
       <div className="max-w-[90vw] lg:max-w-[60vw] mt-20">
         <h1 className=" text-3xl my-6">Who am I?</h1>
         <p className="text-lg my-6">
