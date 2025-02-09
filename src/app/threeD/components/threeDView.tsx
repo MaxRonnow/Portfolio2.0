@@ -4,10 +4,10 @@ import * as THREE from "three";
 import { OrbitControls } from "@react-three/drei";
 import Guitar from "./guitar";
 import Chair from "./chair";
-import { useState } from "react";
+import { useState, cloneElement } from "react";
 
 function ThreeDView() {
-  const models = [<Guitar />, <Chair />];
+  const models = [<Guitar key="guitar" />, <Chair key="chair" />];
   const [currentModel, setModel] = useState(0);
 
   function handleRightClick() {
@@ -22,7 +22,7 @@ function ThreeDView() {
       <div className="relative h-[70vh] w-[90vw] lg:w-[60vw] border-solid border-zinc-500 border-2 bg-black">
         <Canvas camera={{ position: [5, 5, 0] }}>
           <ambientLight intensity={Math.PI / 2} />
-          {models[currentModel]}
+          {cloneElement(models[currentModel], { key: currentModel })}
           {/* @ts-ignore */}
           <OrbitControls autoRotate autoRotateSpeed={0.2} />
         </Canvas>
