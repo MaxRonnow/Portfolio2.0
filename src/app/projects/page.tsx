@@ -4,8 +4,7 @@ function Projects() {
   return (
     <div className="h-screen w-full backdrop-blur-sm flex flex-col items-center font-title font-extralight">
       <div className="min-w-10 max-w-[90vw] lg:max-w-[70vw] my-10">
-
-      <div className="my-16">
+        <div className="my-16">
           <h1 className="text-3xl py-3 my-3">Portfolio page</h1>
           <p className="text-lg">
             This page is created using NextJS and React Three Fiber. It also
@@ -13,41 +12,66 @@ function Projects() {
             Github.
           </p>
           <span className="flex flex-row justify-between lg:w-[25%] my-5">
-            <Image
-              src={"./nextjs.svg"}
-              height={40}
-              width={40}
-              alt="NextJS logo logo"
-              className="invert"
-            ></Image>
-            <Image
-              src={"./react.svg"}
-              height={40}
-              width={40}
-              alt="React logo"
-              className="invert"
-            ></Image>
-            <Image
-              src={"./typescript.svg"}
-              width={40}
-              height={40}
-              alt="Typescript logo"
-              className="invert"
-            ></Image>
-            <Image
-              src={"./tailwind.svg"}
-              width={40}
-              height={40}
-              alt="Tailwind logo"
-              className="invert"
-            ></Image>
-            <Image
-              src={"./three.svg"}
-              height={40}
-              width={40}
-              alt="ThreeJS logo"
-              className="invert"
-            ></Image>
+            <div className="group">
+              <Image
+                src={"./nextjs.svg"}
+                height={40}
+                width={40}
+                alt="NextJS logo"
+                className="invert"
+              ></Image>
+              <span className="group-hover:visible invisible absolute rounded-full shadow-lg p-2 bg-white text-black mb-8">
+                NextJS
+              </span>
+            </div>
+            <div className="group">
+              <Image
+                src={"./react.svg"}
+                height={40}
+                width={40}
+                alt="React logo"
+                className="invert"
+              ></Image>
+              <span className="group-hover:visible invisible absolute rounded-full shadow-lg p-2 bg-white text-black mb-8">
+                React
+              </span>
+            </div>
+            <div className="group">
+              <Image
+                src={"./typescript.svg"}
+                height={40}
+                width={40}
+                alt="Typescript logo"
+                className="invert"
+              ></Image>
+              <span className="group-hover:visible invisible absolute rounded-full shadow-lg p-2 bg-white text-black mb-8">
+                TypeScript
+              </span>
+            </div>
+            <div className="group">
+              <Image
+                src={"./tailwind.svg"}
+                height={40}
+                width={40}
+                alt="Tailwind logo"
+                className="invert"
+              ></Image>
+              <span className="group-hover:visible invisible absolute rounded-full shadow-lg p-2 bg-white text-black mb-8">
+                Tailwind
+              </span>
+            </div>
+            <div className="group">
+              <Image
+                src={"./three.svg"}
+                height={40}
+                width={40}
+                alt="ThreeJS logo"
+                className="invert"
+              ></Image>
+              <span className="group-hover:visible invisible absolute rounded-full shadow-lg p-2 bg-white text-black mb-8">
+                ThreeJS
+              </span>
+            </div>
           </span>
           <a
             className="group hover:bg-white hover:text-black rounded-full ease-in-out border-solid border-2 border-zinc-500 p-2 my-4 h-auto w-40 flex flex-row justify-evenly"
@@ -72,13 +96,18 @@ function Projects() {
             a simple delay
           </p>
           <span className="flex my-5">
-            <Image
-              src={"./rust.svg"}
-              height={50}
-              width={50}
-              alt="Rust logo"
-              className="invert"
-            ></Image>
+            <div className="group">
+              <Image
+                src={"./rust.svg"}
+                height={45}
+                width={45}
+                alt="Rust logo"
+                className="invert"
+              ></Image>
+              <span className="group-hover:visible invisible absolute rounded-full shadow-lg p-2 bg-white text-black mb-8">
+                Rust
+              </span>
+            </div>
           </span>
           <a
             className="group hover:bg-white hover:text-black rounded-full ease-in-out border-solid border-2 border-zinc-500 p-2 my-4 h-auto w-40 flex flex-row justify-evenly"
@@ -102,41 +131,66 @@ function Projects() {
             A webshop with a frontend in NextJS and a backend in Django
           </p>
           <span className="flex flex-row justify-between lg:w-[25%] my-5">
-            <Image
-              src={"./nextjs.svg"}
-              height={40}
-              width={40}
-              alt="NextJS logo logo"
-              className="invert"
-            ></Image>
-            <Image
-              src={"./react.svg"}
-              height={40}
-              width={40}
-              alt="React logo"
-              className="invert"
-            ></Image>
-            <Image
-              src={"./typescript.svg"}
-              width={40}
-              height={40}
-              alt="Typescript logo"
-              className="invert"
-            ></Image>
-            <Image
-              src={"./tailwind.svg"}
-              width={40}
-              height={40}
-              alt="Tailwind logo"
-              className="invert"
-            ></Image>
-            <Image
-              src={"./django.svg"}
-              height={40}
-              width={40}
-              alt="Django logo"
-              className="invert"
-            ></Image>
+            <div className="group">
+              <Image
+                src={"./nextjs.svg"}
+                height={40}
+                width={40}
+                alt="NextJS logo"
+                className="invert"
+              ></Image>
+              <span className="group-hover:visible invisible absolute rounded-full shadow-lg p-2 bg-white text-black mb-8">
+                NextJS
+              </span>
+            </div>
+            <div className="group">
+              <Image
+                src={"./react.svg"}
+                height={40}
+                width={40}
+                alt="React logo"
+                className="invert"
+              ></Image>
+              <span className="group-hover:visible invisible absolute rounded-full shadow-lg p-2 bg-white text-black mb-8">
+                React
+              </span>
+            </div>
+            <div className="group">
+              <Image
+                src={"./typescript.svg"}
+                height={40}
+                width={40}
+                alt="Typescript logo"
+                className="invert"
+              ></Image>
+              <span className="group-hover:visible invisible absolute rounded-full shadow-lg p-2 bg-white text-black mb-8">
+                TypeScript
+              </span>
+            </div>
+            <div className="group">
+              <Image
+                src={"./tailwind.svg"}
+                height={40}
+                width={40}
+                alt="Tailwind logo"
+                className="invert"
+              ></Image>
+              <span className="group-hover:visible invisible absolute rounded-full shadow-lg p-2 bg-white text-black mb-8">
+                Tailwind
+              </span>
+            </div>
+            <div className="group">
+              <Image
+                src={"./django.svg"}
+                height={40}
+                width={40}
+                alt="Django logo"
+                className="invert"
+              ></Image>
+              <span className="group-hover:visible invisible absolute rounded-full shadow-lg p-2 bg-white text-black mb-8">
+                Django
+              </span>
+            </div>
           </span>
           <a
             className="group hover:bg-white hover:text-black rounded-full ease-in-out border-solid border-2 border-zinc-500 p-2 my-4 h-auto w-40 flex flex-row justify-evenly"
@@ -153,8 +207,6 @@ function Projects() {
             View on Github
           </a>
         </div>
-
-        
       </div>
     </div>
   );
