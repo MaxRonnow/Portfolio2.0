@@ -4,10 +4,12 @@ import * as THREE from "three";
 import { OrbitControls } from "@react-three/drei";
 import Guitar from "./guitar";
 import Chair from "./chair";
+import Stubbe from "./stubbe"
+import Donut from "./donut";
 import { useState, cloneElement } from "react";
 
 function ThreeDView() {
-  const models = [<Guitar key="guitar" />, <Chair key="chair" />];
+  const models = [<Guitar key="guitar" />, <Chair key="chair" />, <Stubbe key="stubbe"/>, <Donut key="donut"/>];
   const [currentModel, setModel] = useState(0);
 
   function handleRightClick() {
@@ -20,7 +22,7 @@ function ThreeDView() {
   return (
     <div>
       <div className="relative h-[70vh] w-[90vw] lg:w-[60vw] border-solid border-zinc-500 border-2 bg-black">
-        <Canvas camera={{ position: [5, 5, 0] }}>
+        <Canvas camera={{ position: [1, 1, 1] }}>
           <ambientLight intensity={Math.PI / 2} />
           {cloneElement(models[currentModel], { key: currentModel })}
           {/* @ts-ignore */}
