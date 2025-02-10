@@ -22,7 +22,7 @@ export default function Contact() {
           className="text-lg border-solid border-2 border-zinc-500 rounded-full hover:text-black hover:bg-white flex flex-row justify-evenly items-center group my-3 w-72 h-11"
         >
           <Image
-            src={"./email-svgrepo-com.svg"}
+            src={"./email.svg"}
             width={"20"}
             height={"20"}
             alt="Email icon"
@@ -44,7 +44,7 @@ export default function Contact() {
           className="border-solid border-2 border-zinc-500 rounded-full w-32 p-2 hover:text-black hover:bg-white flex flex-row justify-evenly group my-3"
         >
           <Image
-            src={"./linkedin-logo-thin-svgrepo-com.svg"}
+            src={"./linkedin.svg"}
             height={"20"}
             width={"20"}
             alt="LinkedIn logo"
@@ -57,7 +57,7 @@ export default function Contact() {
           className="group hover:bg-white hover:text-black rounded-full border-solid border-2 border-zinc-500 p-2 w-32 flex flex-row justify-evenly my-3"
         >
           <Image
-            src={"/github-mark-white.svg"}
+            src={"/github.svg"}
             alt="github logo"
             width={25}
             height={15}

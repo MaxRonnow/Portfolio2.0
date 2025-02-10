@@ -33,11 +33,13 @@ export default function Aboutme() {
           This website is created in NextJS with React Three Fiber for the 3D
           visuals, Tailwind for styling and Zustand for state management.
         </p>
+
+        <h2 className="text-2xl mt-16 mb-6">Skills</h2>
       
 
       <div className="flex flex-row w-full lg:w-[60%] justify-between ">
         <span className="flex flex-row justify-between w-44 items-center">
-          <Image src={"./java-svgrepo-com.svg"} height={40} width={40} alt="Java logo" className="invert"></Image>
+          <Image src={"./java.svg"} height={40} width={40} alt="Java logo" className="invert"></Image>
           <div className="rounded-full bg-white h-5 w-5"></div>
           <div className="rounded-full bg-white h-5 w-5"></div>
           <div className="rounded-full bg-white h-5 w-5"></div>
@@ -46,7 +48,7 @@ export default function Aboutme() {
         </span>
 
         <span className="flex flex-row justify-between w-44 items-center">
-          <Image src={"./javascript-fill-svgrepo-com.svg"} height={40} width={40} alt="Java logo" className="invert"></Image>
+          <Image src={"./javascript.svg"} height={40} width={40} alt="Java logo" className="invert"></Image>
           <div className="rounded-full bg-white h-5 w-5"></div>
           <div className="rounded-full bg-white h-5 w-5"></div>
           <div className="rounded-full bg-white h-5 w-5"></div>
@@ -55,7 +57,7 @@ export default function Aboutme() {
         </span>
 
         <span className="flex flex-row justify-between w-44 items-center">
-          <Image src={"./rust-svgrepo-com.svg"} height={40} width={40} alt="Java logo" className="invert"></Image>
+          <Image src={"./rust.svg"} height={40} width={40} alt="Java logo" className="invert"></Image>
           <div className="rounded-full bg-white h-5 w-5"></div>
           <div className="rounded-full bg-white h-5 w-5"></div>
           <div className="rounded-full border-solid border-white border-2 h-5 w-5"></div>
@@ -64,7 +66,7 @@ export default function Aboutme() {
         </span>
 
         <span className="flex flex-row justify-between w-44 items-center">
-          <Image src={"./python-svgrepo-com.svg"} height={40} width={40} alt="Java logo" className="invert"></Image>
+          <Image src={"./python.svg"} height={40} width={40} alt="Java logo" className="invert"></Image>
           <div className="rounded-full bg-white h-5 w-5"></div>
           <div className="rounded-full bg-white h-5 w-5"></div>
           <div className="rounded-full border-solid border-white border-2 h-5 w-5"></div>
@@ -73,8 +75,13 @@ export default function Aboutme() {
         </span>
       </div>
 
-      <div className="flex flex-row">
-        
+      <div className="flex flex-row my-10 justify-between items-center lg:w-[30%]">
+        <Image src={"./typescript.svg"} height={40} width={40} alt="Typescript logo" className="invert"></Image>
+        <Image src={"./react.svg"} height={40} width={40} alt="React logo" className="invert"></Image>
+        <Image src={"./django.svg"} height={40} width={40} alt="Django logo" className="invert"></Image>
+        <Image src={"./tailwind.svg"} height={40} width={40} alt="Tailwind logo" className="invert"></Image>
+        <Image src={"./nextjs.svg"} height={40} width={40} alt="NextJS logo" className="invert"></Image>
+        <Image src={"./git.svg"} height={40} width={40} alt="Git logo" className="invert"></Image>
       </div>
 
       </div>

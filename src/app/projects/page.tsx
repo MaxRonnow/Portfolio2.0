@@ -14,21 +14,21 @@ function Projects() {
           </p>
           <span className="flex flex-row justify-between lg:w-[25%] my-5">
             <Image
-              src={"./nextjs-fill-svgrepo-com.svg"}
+              src={"./nextjs.svg"}
               height={40}
               width={40}
               alt="NextJS logo logo"
               className="invert"
             ></Image>
             <Image
-              src={"./react-svgrepo-com.svg"}
+              src={"./react.svg"}
               height={40}
               width={40}
               alt="React logo"
               className="invert"
             ></Image>
             <Image
-              src={"./typescript-svgrepo-com.svg"}
+              src={"./typescript.svg"}
               width={40}
               height={40}
               alt="Typescript logo"
@@ -55,7 +55,7 @@ function Projects() {
             href="https://github.com/"
           >
             <Image
-              src={"/github-mark-white.svg"}
+              src={"/github.svg"}
               alt="github logo"
               width={25}
               height={20}
@@ -73,7 +73,7 @@ function Projects() {
           </p>
           <span className="flex my-5">
             <Image
-              src={"./rust-svgrepo-com.svg"}
+              src={"./rust.svg"}
               height={50}
               width={50}
               alt="Rust logo"
@@ -86,7 +86,7 @@ function Projects() {
             href="https://github.com/MaxRonnow/audio_effects"
           >
             <Image
-              src={"/github-mark-white.svg"}
+              src={"/github.svg"}
               alt="github logo"
               width={25}
               height={20}
@@ -103,21 +103,21 @@ function Projects() {
           </p>
           <span className="flex flex-row justify-between lg:w-[25%] my-5">
             <Image
-              src={"./nextjs-fill-svgrepo-com.svg"}
+              src={"./nextjs.svg"}
               height={40}
               width={40}
               alt="NextJS logo logo"
               className="invert"
             ></Image>
             <Image
-              src={"./react-svgrepo-com.svg"}
+              src={"./react.svg"}
               height={40}
               width={40}
               alt="React logo"
               className="invert"
             ></Image>
             <Image
-              src={"./typescript-svgrepo-com.svg"}
+              src={"./typescript.svg"}
               width={40}
               height={40}
               alt="Typescript logo"
@@ -131,7 +131,7 @@ function Projects() {
               className="invert"
             ></Image>
             <Image
-              src={"./django-svgrepo-com.svg"}
+              src={"./django.svg"}
               height={40}
               width={40}
               alt="Django logo"
@@ -144,7 +144,7 @@ function Projects() {
             href="https://github.com/"
           >
             <Image
-              src={"/github-mark-white.svg"}
+              src={"/github.svg"}
               alt="github logo"
               width={25}
               height={20}
