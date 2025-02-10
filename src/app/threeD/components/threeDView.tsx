@@ -23,7 +23,7 @@ function ThreeDView() {
     <div>
       <div className="relative h-[70vh] w-[90vw] lg:w-[60vw] border-solid border-zinc-500 border-2 bg-black">
         <Canvas camera={{ position: [1, 1, 1] }}>
-          <ambientLight intensity={2} />
+          <ambientLight intensity={20} />
           {cloneElement(models[currentModel], { key: currentModel })}
           {/* @ts-ignore */}
           <OrbitControls autoRotate autoRotateSpeed={0.2} />
