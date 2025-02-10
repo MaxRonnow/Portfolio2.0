@@ -10,9 +10,17 @@ function Projects() {
             A collection of audio effects written in rust, currently implemented
             a simple delay
           </p>
-          <span className="flex"><Image src={"./rust-svgrepo-com.svg"} height={200} width={200} alt="Rust logo"></Image></span>
+          <span className="flex my-5">
+            <Image
+              src={"./rust-svgrepo-com.svg"}
+              height={50}
+              width={50}
+              alt="Rust logo"
+              className="invert"
+            ></Image>
+          </span>
           <a
-            className="group hover:bg-white hover:text-black rounded-full ease-in-out border-solid border-2 border-zinc-500 p-2 m-4 h-auto w-40 flex flex-row justify-evenly"
+            className="group hover:bg-white hover:text-black rounded-full ease-in-out border-solid border-2 border-zinc-500 p-2 my-4 h-auto w-40 flex flex-row justify-evenly"
             rel="noopener noreferrer"
             href="https://github.com/"
           >
@@ -32,11 +40,45 @@ function Projects() {
           <p className="text-lg">
             A webshop with a frontend in NextJS and a backend in Django
           </p>
-          <span className="flex">
-            {/* <Image alt="NextJS logo"></Image> */}
+          <span className="flex flex-row justify-between lg:w-[25%] my-5">
+            <Image
+              src={"./nextjs-fill-svgrepo-com.svg"}
+              height={40}
+              width={40}
+              alt="NextJS logo logo"
+              className="invert"
+            ></Image>
+            <Image
+              src={"./react-svgrepo-com.svg"}
+              height={40}
+              width={40}
+              alt="React logo"
+              className="invert"
+            ></Image>
+            <Image
+              src={"./typescript-svgrepo-com.svg"}
+              width={40}
+              height={40}
+              alt="Typescript logo"
+              className="invert"
+            ></Image>
+            <Image
+              src={"./tailwind.svg"}
+              width={40}
+              height={40}
+              alt="Tailwind logo"
+              className="invert"
+            ></Image>
+            <Image
+              src={"./django-svgrepo-com.svg"}
+              height={40}
+              width={40}
+              alt="Django logo"
+              className="invert"
+            ></Image>
           </span>
           <a
-            className="group hover:bg-white hover:text-black rounded-full ease-in-out border-solid border-2 border-zinc-500 p-2 m-4 h-auto w-40 flex flex-row justify-evenly"
+            className="group hover:bg-white hover:text-black rounded-full ease-in-out border-solid border-2 border-zinc-500 p-2 my-4 h-auto w-40 flex flex-row justify-evenly"
             rel="noopener noreferrer"
             href="https://github.com/"
           >
@@ -58,8 +100,45 @@ function Projects() {
             uses Zustand for state management. The source code is available on
             Github.
           </p>
+          <span className="flex flex-row justify-between lg:w-[25%] my-5">
+            <Image
+              src={"./nextjs-fill-svgrepo-com.svg"}
+              height={40}
+              width={40}
+              alt="NextJS logo logo"
+              className="invert"
+            ></Image>
+            <Image
+              src={"./react-svgrepo-com.svg"}
+              height={40}
+              width={40}
+              alt="React logo"
+              className="invert"
+            ></Image>
+            <Image
+              src={"./typescript-svgrepo-com.svg"}
+              width={40}
+              height={40}
+              alt="Typescript logo"
+              className="invert"
+            ></Image>
+            <Image
+              src={"./tailwind.svg"}
+              width={40}
+              height={40}
+              alt="Tailwind logo"
+              className="invert"
+            ></Image>
+            <Image
+              src={"./three.svg"}
+              height={40}
+              width={40}
+              alt="ThreeJS logo"
+              className="invert"
+            ></Image>
+          </span>
           <a
-            className="group hover:bg-white hover:text-black rounded-full ease-in-out border-solid border-2 border-zinc-500 p-2 m-4 h-auto w-40 flex flex-row justify-evenly"
+            className="group hover:bg-white hover:text-black rounded-full ease-in-out border-solid border-2 border-zinc-500 p-2 my-4 h-auto w-40 flex flex-row justify-evenly"
             rel="noopener noreferrer"
             href="https://github.com/"
           >
