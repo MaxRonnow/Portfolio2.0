@@ -1,7 +1,10 @@
-function Aboutme() {
+import Image from "next/image";
+
+export default function Aboutme() {
   return (
     <div className="backdrop-blur-sm min-w-full min-h-screen flex flex-col items-center font-title font-extralight">
       <div className="max-w-[90vw] lg:max-w-[60vw] mt-20">
+        
         <h1 className=" text-3xl my-6">Who am I?</h1>
         <p className="text-lg my-6">
           Hi, I&apos;m Max. I am a 21 year old student currently studying computer
@@ -30,9 +33,51 @@ function Aboutme() {
           This website is created in NextJS with React Three Fiber for the 3D
           visuals, Tailwind for styling and Zustand for state management.
         </p>
+      
+
+      <div className="flex flex-row w-full lg:w-[60%] justify-between ">
+        <span className="flex flex-row justify-between w-44 items-center">
+          <Image src={"./java-svgrepo-com.svg"} height={40} width={40} alt="Java logo" className="invert"></Image>
+          <div className="rounded-full bg-white h-5 w-5"></div>
+          <div className="rounded-full bg-white h-5 w-5"></div>
+          <div className="rounded-full bg-white h-5 w-5"></div>
+          <div className="rounded-full bg-white h-5 w-5"></div>
+          <div className="rounded-full border-solid border-white border-2 h-5 w-5"></div>
+        </span>
+
+        <span className="flex flex-row justify-between w-44 items-center">
+          <Image src={"./javascript-fill-svgrepo-com.svg"} height={40} width={40} alt="Java logo" className="invert"></Image>
+          <div className="rounded-full bg-white h-5 w-5"></div>
+          <div className="rounded-full bg-white h-5 w-5"></div>
+          <div className="rounded-full bg-white h-5 w-5"></div>
+          <div className="rounded-full border-solid border-white border-2 h-5 w-5"></div>
+          <div className="rounded-full border-solid border-white border-2 h-5 w-5"></div>
+        </span>
+
+        <span className="flex flex-row justify-between w-44 items-center">
+          <Image src={"./rust-svgrepo-com.svg"} height={40} width={40} alt="Java logo" className="invert"></Image>
+          <div className="rounded-full bg-white h-5 w-5"></div>
+          <div className="rounded-full bg-white h-5 w-5"></div>
+          <div className="rounded-full border-solid border-white border-2 h-5 w-5"></div>
+          <div className="rounded-full border-solid border-white border-2 h-5 w-5"></div>
+          <div className="rounded-full border-solid border-white border-2 h-5 w-5"></div>
+        </span>
+
+        <span className="flex flex-row justify-between w-44 items-center">
+          <Image src={"./python-svgrepo-com.svg"} height={40} width={40} alt="Java logo" className="invert"></Image>
+          <div className="rounded-full bg-white h-5 w-5"></div>
+          <div className="rounded-full bg-white h-5 w-5"></div>
+          <div className="rounded-full border-solid border-white border-2 h-5 w-5"></div>
+          <div className="rounded-full border-solid border-white border-2 h-5 w-5"></div>
+          <div className="rounded-full border-solid border-white border-2 h-5 w-5"></div>
+        </span>
+      </div>
+
+      <div className="flex flex-row">
+        
+      </div>
+
       </div>
     </div>
   );
 }
-
-export default Aboutme;
