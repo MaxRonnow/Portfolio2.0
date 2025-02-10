@@ -1,17 +1,22 @@
 "use client";
 import { Canvas, Camera } from "@react-three/fiber";
 import * as THREE from "three";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Stage } from "@react-three/drei";
 import Guitar from "./guitar";
 import Chair from "./chair";
-import Stubbe from "./stubbe"
+import Stubbe from "./stubbe";
 import Donut from "./donut";
-import { useState, cloneElement } from "react";
+import { useState, cloneElement, useRef, useLayoutEffect } from "react";
 
 function ThreeDView() {
-  const models = [<Guitar key="guitar" />, <Chair key="chair" />, <Stubbe key="stubbe"/>, <Donut key="donut"/>];
+  const models = [
+    <Guitar key="guitar" />,
+    <Stubbe key="stubbe" />,
+    <Chair key="chair" />,
+    <Donut key="donut" />,
+  ];
   const [currentModel, setModel] = useState(0);
-
+  const shadows = true;
   function handleRightClick() {
     setModel((prev) => (prev === models.length - 1 ? 0 : prev + 1));
   }
@@ -22,11 +27,24 @@ function ThreeDView() {
   return (
     <div>
       <div className="relative h-[70vh] w-[90vw] lg:w-[60vw] border-solid border-zinc-500 border-2 bg-black">
-        <Canvas camera={{ position: [1, 1, 1] }}>
-          <ambientLight intensity={20} />
-          {cloneElement(models[currentModel], { key: currentModel })}
-          {/* @ts-ignore */}
-          <OrbitControls autoRotate autoRotateSpeed={0.2} />
+        <Canvas
+          gl={{ preserveDrawingBuffer: true }}
+          shadows
+          dpr={[1, 1.5]}
+          camera={{ position: [0, 0, 150], fov: 50 }}
+        >
+          <ambientLight intensity={0.25} />
+          <Stage
+            preset={"rembrandt"}
+            intensity={1}
+            contactShadow={true}
+            shadows
+            adjustCamera
+            environment={"night"}
+          >
+            {cloneElement(models[currentModel], { key: currentModel })}
+          </Stage>
+          <OrbitControls autoRotate={true} />
         </Canvas>
         <button
           onClick={handleRightClick}
@@ -40,7 +58,9 @@ function ThreeDView() {
         >
           <div className="relative left-3 border-solid border-zinc-500 group-hover:border-white [border-width:0_3px_3px_0] h-4 w-4 [transform:rotate(135deg)] [-webkit-transform:rotate(135deg)]"></div>
         </button>
-        <div className="absolute bottom-3 left-[48%] ">{currentModel + 1} / {models.length}</div>
+        <div className="absolute bottom-3 left-[48%] ">
+          {currentModel + 1} / {models.length}
+        </div>
       </div>
     </div>
   );
