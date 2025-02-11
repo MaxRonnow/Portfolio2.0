@@ -128,7 +128,7 @@ function Projects() {
         <div className="my-16">
           <h1 className="text-3xl py-3 my-3">Webshop in nextjs</h1>
           <p className="text-lg">
-            A webshop with a frontend in NextJS and a backend in Django
+            A webshop with a frontend in NextJS and a backend in Django. Very work in progress.
           </p>
           <span className="flex flex-row justify-between lg:w-[25%] my-5">
             <div className="group">
@@ -195,7 +195,7 @@ function Projects() {
           <a
             className="group hover:bg-white hover:text-black rounded-full ease-in-out border-solid border-2 border-zinc-500 p-2 my-4 h-auto w-40 flex flex-row justify-evenly"
             rel="noopener noreferrer"
-            href="https://github.com/"
+            href="https://github.com/MaxRonnow/WebShop"
           >
             <Image
               src={"/github.svg"}
