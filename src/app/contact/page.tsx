@@ -40,7 +40,7 @@ export default function Contact() {
           </span>
         </button>
         <a
-          href="www.linkedin.com/in/max-ronnow-82a664304"
+          href="https://www.linkedin.com/in/max-ronnow-82a664304"
           className="border-solid border-2 border-zinc-500 rounded-full w-32 p-2 hover:text-black hover:bg-white flex flex-row justify-evenly group my-3"
         >
           <Image
@@ -53,7 +53,7 @@ export default function Contact() {
           LinkedIn
         </a>
         <a
-          href=""
+          href="https://github.com/MaxRonnow"
           className="group hover:bg-white hover:text-black rounded-full border-solid border-2 border-zinc-500 p-2 w-32 flex flex-row justify-evenly my-3"
         >
           <Image
