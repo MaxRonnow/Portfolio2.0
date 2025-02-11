@@ -83,10 +83,10 @@ type GLTFResult = GLTF & {
     Cylinder031: THREE.Mesh
     Cylinder037: THREE.Mesh
     Cylinder037_1: THREE.Mesh
-    Mesh_25: THREE.Mesh
-    Mesh_26: THREE.Mesh
     Mesh_27: THREE.Mesh
     Mesh_28: THREE.Mesh
+    Mesh_25: THREE.Mesh
+    Mesh_26: THREE.Mesh
   }
   materials: {
     Material: THREE.MeshPhysicalMaterial
@@ -101,13 +101,12 @@ type GLTFResult = GLTF & {
     Rubber: THREE.MeshStandardMaterial
   }
 }
-
 /* @ts-ignore */
 export default function Guitar(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/guitar.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
-      <group position={[0, 0.1336, 0]}>
+      <group position={[0, 0.134, 0]}>
         <mesh
           castShadow
           receiveShadow
@@ -126,272 +125,272 @@ export default function Guitar(props: JSX.IntrinsicElements['group']) {
         receiveShadow
         geometry={nodes.Cylinder.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2523, -1.9644]}
+        position={[-0.129, 0.252, -1.964]}
         rotation={[0, 0, -Math.PI / 2]}
-        scale={0.0469}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder001.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2551, -1.765]}
+        position={[-0.129, 0.255, -1.765]}
         rotation={[0, 0, -Math.PI / 2]}
-        scale={0.0469}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder002.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.258, -1.5707]}
-        rotation={[0, 0.0329, -Math.PI / 2]}
-        scale={0.0469}
+        position={[-0.129, 0.258, -1.571]}
+        rotation={[0, 0.033, -Math.PI / 2]}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder003.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2601, -1.3907]}
-        rotation={[0, 0.0518, -Math.PI / 2]}
-        scale={0.0469}
+        position={[-0.129, 0.26, -1.391]}
+        rotation={[0, 0.052, -Math.PI / 2]}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder004.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2633, -1.2218]}
-        rotation={[0, 0.0656, -Math.PI / 2]}
-        scale={0.0469}
+        position={[-0.129, 0.263, -1.222]}
+        rotation={[0, 0.066, -Math.PI / 2]}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder005.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2653, -1.0563]}
-        rotation={[0, 0.0848, -Math.PI / 2]}
-        scale={0.0469}
+        position={[-0.129, 0.265, -1.056]}
+        rotation={[0, 0.085, -Math.PI / 2]}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder006.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2675, -0.9051]}
-        rotation={[0, 0.0898, -Math.PI / 2]}
-        scale={0.0469}
+        position={[-0.129, 0.267, -0.905]}
+        rotation={[0, 0.09, -Math.PI / 2]}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder007.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2693, -0.7623]}
-        rotation={[0, 0.0988, -Math.PI / 2]}
-        scale={0.0469}
+        position={[-0.129, 0.269, -0.762]}
+        rotation={[0, 0.099, -Math.PI / 2]}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder008.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2712, -0.6274]}
-        rotation={[0, 0.1051, -Math.PI / 2]}
-        scale={0.0469}
+        position={[-0.129, 0.271, -0.627]}
+        rotation={[0, 0.105, -Math.PI / 2]}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder009.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.273, -0.4998]}
-        rotation={[0, 0.1126, -Math.PI / 2]}
-        scale={0.0469}
+        position={[-0.129, 0.273, -0.5]}
+        rotation={[0, 0.113, -Math.PI / 2]}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder010.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2749, -0.3775]}
-        rotation={[0, 0.1236, -Math.PI / 2]}
-        scale={0.0469}
+        position={[-0.129, 0.275, -0.378]}
+        rotation={[0, 0.124, -Math.PI / 2]}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder011.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2761, -0.2637]}
-        rotation={[0, 0.1302, -Math.PI / 2]}
-        scale={0.0469}
+        position={[-0.129, 0.276, -0.264]}
+        rotation={[0, 0.13, -Math.PI / 2]}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder012.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2779, -0.177]}
+        position={[-0.129, 0.278, -0.177]}
         rotation={[0, 0, -Math.PI / 2]}
-        scale={0.0469}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder013.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2794, -0.0762]}
+        position={[-0.129, 0.279, -0.076]}
         rotation={[0, 0, -Math.PI / 2]}
-        scale={0.0469}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder014.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2807, 0.0174]}
+        position={[-0.129, 0.281, 0.017]}
         rotation={[0, 0, -Math.PI / 2]}
-        scale={0.0469}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder015.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.282, 0.1097]}
+        position={[-0.129, 0.282, 0.11]}
         rotation={[0, 0, -Math.PI / 2]}
-        scale={0.0469}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder016.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2837, 0.1935]}
+        position={[-0.129, 0.284, 0.194]}
         rotation={[0, 0, -Math.PI / 2]}
-        scale={0.0469}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder017.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2846, 0.2774]}
+        position={[-0.129, 0.285, 0.277]}
         rotation={[0, 0, -Math.PI / 2]}
-        scale={0.0469}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder018.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2855, 0.3515]}
+        position={[-0.129, 0.285, 0.351]}
         rotation={[0, 0, -Math.PI / 2]}
-        scale={0.0469}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder019.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2868, 0.4197]}
+        position={[-0.129, 0.287, 0.42]}
         rotation={[0, 0, -Math.PI / 2]}
-        scale={0.0469}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder020.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2877, 0.486]}
+        position={[-0.129, 0.288, 0.486]}
         rotation={[0, 0, -Math.PI / 2]}
-        scale={0.0469}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder021.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2885, 0.5556]}
+        position={[-0.129, 0.288, 0.556]}
         rotation={[0, 0, -Math.PI / 2]}
-        scale={0.0469}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder022.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2894, 0.6121]}
+        position={[-0.129, 0.289, 0.612]}
         rotation={[0, 0, -Math.PI / 2]}
-        scale={0.0469}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder023.geometry}
         material={materials.Screws}
-        position={[-0.1293, 0.2898, 0.6687]}
+        position={[-0.129, 0.29, 0.669]}
         rotation={[0, 0, -Math.PI / 2]}
-        scale={0.0469}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder024.geometry}
         material={materials.Screws}
-        position={[-0.1282, 0.254, -2.1789]}
-        rotation={[0, -0.0121, -Math.PI / 2]}
-        scale={0.0469}
+        position={[-0.128, 0.254, -2.179]}
+        rotation={[0, -0.012, -Math.PI / 2]}
+        scale={0.047}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Humbucker1.geometry}
         material={materials.Humbuckers}
-        position={[0.0256, 0.1967, 1.4105]}
-        scale={[0.2017, 0.2411, 0.1096]}
+        position={[0.026, 0.197, 1.41]}
+        scale={[0.202, 0.241, 0.11]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Humbucker2.geometry}
         material={materials.Humbuckers}
-        position={[0.0256, 0.191, 0.9178]}
-        scale={[0.2017, 0.2411, 0.1096]}
+        position={[0.026, 0.191, 0.918]}
+        scale={[0.202, 0.241, 0.11]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.SingeCoil.geometry}
         material={materials.Humbuckers}
-        position={[0.0234, 0.1736, 1.1501]}
-        scale={[0.209, 0.1245, 0.0517]}>
+        position={[0.023, 0.174, 1.15]}
+        scale={[0.209, 0.125, 0.052]}>
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.SingleCoil_Magnet1.geometry}
           material={materials['Strings.001']}
-          position={[0.151, 0.9488, 0.0019]}
-          scale={[0.0575, 0.0965, 0.2326]}
+          position={[0.151, 0.949, 0.002]}
+          scale={[0.058, 0.097, 0.233]}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.SingleCoil_Magnet2.geometry}
           material={materials['Strings.003']}
-          position={[0.4507, 0.9488, 0.0019]}
-          scale={[0.0575, 0.0965, 0.2326]}
+          position={[0.451, 0.949, 0.002]}
+          scale={[0.058, 0.097, 0.233]}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.SingleCoil_Magnet3.geometry}
           material={materials['Strings.002']}
-          position={[0.7498, 0.9488, 0.0019]}
-          scale={[0.0575, 0.0965, 0.2326]}
+          position={[0.75, 0.949, 0.002]}
+          scale={[0.058, 0.097, 0.233]}
         />
       </mesh>
       <mesh
@@ -399,7 +398,7 @@ export default function Guitar(props: JSX.IntrinsicElements['group']) {
         receiveShadow
         geometry={nodes.Bolt001.geometry}
         material={materials.Screws}
-        position={[0.2416, 0.2085, 0.9187]}
+        position={[0.242, 0.208, 0.919]}
         scale={0.005}
       />
       <mesh
@@ -407,7 +406,7 @@ export default function Guitar(props: JSX.IntrinsicElements['group']) {
         receiveShadow
         geometry={nodes.Bolt002.geometry}
         material={materials.Screws}
-        position={[-0.1915, 0.2085, 0.9187]}
+        position={[-0.192, 0.208, 0.919]}
         scale={0.005}
       />
       <mesh
@@ -415,7 +414,7 @@ export default function Guitar(props: JSX.IntrinsicElements['group']) {
         receiveShadow
         geometry={nodes.Bolt003.geometry}
         material={materials.Screws}
-        position={[-0.1915, 0.2153, 1.4114]}
+        position={[-0.192, 0.215, 1.411]}
         scale={0.005}
       />
       <mesh
@@ -423,7 +422,7 @@ export default function Guitar(props: JSX.IntrinsicElements['group']) {
         receiveShadow
         geometry={nodes.Bolt004.geometry}
         material={materials.Screws}
-        position={[0.2415, 0.2185, 1.4114]}
+        position={[0.241, 0.218, 1.411]}
         scale={0.005}
       />
       <mesh
@@ -431,22 +430,22 @@ export default function Guitar(props: JSX.IntrinsicElements['group']) {
         receiveShadow
         geometry={nodes.Bridge.geometry}
         material={materials.Hardware}
-        position={[0.0285, 0.2793, 1.6931]}>
+        position={[0.028, 0.279, 1.693]}>
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Bridge_tuner1.geometry}
           material={materials.Hardware}
-          position={[-0.1573, 0.0291, 0.1327]}
+          position={[-0.157, 0.029, 0.133]}
           rotation={[-Math.PI / 2, 0, 0]}>
           <mesh
             castShadow
             receiveShadow
             geometry={nodes.Tuner_saddle.geometry}
             material={materials.Screws}
-            position={[0.0005, 0.1073, 0.0243]}
+            position={[0.001, 0.107, 0.024]}
             rotation={[Math.PI / 2, 0, 0]}
-            scale={0.0084}
+            scale={0.008}
           />
         </mesh>
         <mesh
@@ -454,16 +453,16 @@ export default function Guitar(props: JSX.IntrinsicElements['group']) {
           receiveShadow
           geometry={nodes.Bridge_tuner2.geometry}
           material={materials.Hardware}
-          position={[-0.0931, 0.0291, 0.1153]}
+          position={[-0.093, 0.029, 0.115]}
           rotation={[-Math.PI / 2, 0, 0]}>
           <mesh
             castShadow
             receiveShadow
             geometry={nodes.Tuner_saddle001.geometry}
             material={materials.Screws}
-            position={[0.0005, 0.1073, 0.0243]}
+            position={[0.001, 0.107, 0.024]}
             rotation={[Math.PI / 2, 0, 0]}
-            scale={0.0084}
+            scale={0.008}
           />
         </mesh>
         <mesh
@@ -471,16 +470,16 @@ export default function Guitar(props: JSX.IntrinsicElements['group']) {
           receiveShadow
           geometry={nodes.Bridge_tuner3.geometry}
           material={materials.Hardware}
-          position={[-0.0324, 0.0291, 0.101]}
+          position={[-0.032, 0.029, 0.101]}
           rotation={[-Math.PI / 2, 0, 0]}>
           <mesh
             castShadow
             receiveShadow
             geometry={nodes.Tuner_saddle002.geometry}
             material={materials.Screws}
-            position={[0.0005, 0.1073, 0.0243]}
+            position={[0.001, 0.107, 0.024]}
             rotation={[Math.PI / 2, 0, 0]}
-            scale={0.0084}
+            scale={0.008}
           />
         </mesh>
         <mesh
@@ -488,16 +487,16 @@ export default function Guitar(props: JSX.IntrinsicElements['group']) {
           receiveShadow
           geometry={nodes.Bridge_tuner4.geometry}
           material={materials.Hardware}
-          position={[0.0306, 0.0291, 0.085]}
+          position={[0.031, 0.029, 0.085]}
           rotation={[-Math.PI / 2, 0, 0]}>
           <mesh
             castShadow
             receiveShadow
             geometry={nodes.Tuner_saddle003.geometry}
             material={materials.Screws}
-            position={[0.0005, 0.1073, 0.0243]}
+            position={[0.001, 0.107, 0.024]}
             rotation={[Math.PI / 2, 0, 0]}
-            scale={0.0084}
+            scale={0.008}
           />
         </mesh>
         <mesh
@@ -505,16 +504,16 @@ export default function Guitar(props: JSX.IntrinsicElements['group']) {
           receiveShadow
           geometry={nodes.Bridge_tuner5.geometry}
           material={materials.Hardware}
-          position={[0.0914, 0.0291, 0.0684]}
+          position={[0.091, 0.029, 0.068]}
           rotation={[-Math.PI / 2, 0, 0]}>
           <mesh
             castShadow
             receiveShadow
             geometry={nodes.Tuner_saddle004.geometry}
             material={materials.Screws}
-            position={[0.0005, 0.1073, 0.0243]}
+            position={[0.001, 0.107, 0.024]}
             rotation={[Math.PI / 2, 0, 0]}
-            scale={0.0084}
+            scale={0.008}
           />
         </mesh>
         <mesh
@@ -522,19 +521,19 @@ export default function Guitar(props: JSX.IntrinsicElements['group']) {
           receiveShadow
           geometry={nodes.Bridge_tuner6.geometry}
           material={materials.Hardware}
-          position={[0.1546, 0.0291, 0.0463]}
+          position={[0.155, 0.029, 0.046]}
           rotation={[-Math.PI / 2, 0, 0]}>
           <mesh
             castShadow
             receiveShadow
             geometry={nodes.Tuner_saddle005.geometry}
             material={materials.Screws}
-            position={[0.0005, 0.1073, 0.0243]}
+            position={[0.001, 0.107, 0.024]}
             rotation={[Math.PI / 2, 0, 0]}
-            scale={0.0084}
+            scale={0.008}
           />
         </mesh>
-        <group position={[0.2364, 0.0145, 0.077]} scale={[0.0367, 0.0189, 0.0367]}>
+        <group position={[0.236, 0.014, 0.077]} scale={[0.037, 0.019, 0.037]}>
           <mesh
             castShadow
             receiveShadow
@@ -554,171 +553,171 @@ export default function Guitar(props: JSX.IntrinsicElements['group']) {
         receiveShadow
         geometry={nodes.Bolt.geometry}
         material={materials.Screws}
-        position={[-0.0017, 0.2616, -2.2437]}
-        scale={0.0113}
+        position={[-0.002, 0.262, -2.244]}
+        scale={0.011}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Bolt005.geometry}
         material={materials.Screws}
-        position={[0.0392, 0.2616, -2.2113]}
-        scale={0.0113}
+        position={[0.039, 0.262, -2.211]}
+        scale={0.011}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Bolt006.geometry}
         material={materials.Screws}
-        position={[0.0824, 0.2616, -2.2439]}
-        scale={0.0113}
+        position={[0.082, 0.262, -2.244]}
+        scale={0.011}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Bolt007.geometry}
         material={materials.Screws}
-        position={[-0.0417, 0.2616, -2.2115]}
-        scale={0.0113}
+        position={[-0.042, 0.262, -2.211]}
+        scale={0.011}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Bolt008.geometry}
         material={materials.Screws}
-        position={[-0.0832, 0.2616, -2.245]}
-        scale={0.0113}
+        position={[-0.083, 0.262, -2.245]}
+        scale={0.011}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Bolt009.geometry}
         material={materials.Screws}
-        position={[0.1245, 0.2616, -2.2127]}
-        scale={0.0113}
+        position={[0.125, 0.262, -2.213]}
+        scale={0.011}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cube.geometry}
         material={materials.Hardware}
-        position={[0.0203, 0.2779, -2.1475]}
-        scale={[0.1236, 0.0034, 0.0092]}
+        position={[0.02, 0.278, -2.147]}
+        scale={[0.124, 0.003, 0.009]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cube002.geometry}
         material={materials.Hardware}
-        position={[0.0825, 0.2868, -2.243]}
-        scale={0.0213}
+        position={[0.083, 0.287, -2.243]}
+        scale={0.021}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cube003.geometry}
         material={materials.Hardware}
-        position={[-0.0019, 0.2868, -2.243]}
-        scale={0.0213}
+        position={[-0.002, 0.287, -2.243]}
+        scale={0.021}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cube004.geometry}
         material={materials.Hardware}
-        position={[-0.082, 0.2868, -2.243]}
-        scale={0.0213}
+        position={[-0.082, 0.287, -2.243]}
+        scale={0.021}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cube005.geometry}
         material={materials.Hardware}
-        position={[-0.0417, 0.2868, -2.2005]}
+        position={[-0.042, 0.287, -2.201]}
         rotation={[Math.PI, 0, Math.PI]}
-        scale={0.0213}
+        scale={0.021}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cube006.geometry}
         material={materials.Hardware}
-        position={[0.0403, 0.2868, -2.2005]}
+        position={[0.04, 0.287, -2.201]}
         rotation={[Math.PI, 0, Math.PI]}
-        scale={0.0213}
+        scale={0.021}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cube007.geometry}
         material={materials.Hardware}
-        position={[0.1227, 0.2868, -2.2005]}
+        position={[0.123, 0.287, -2.201]}
         rotation={[Math.PI, 0, Math.PI]}
-        scale={0.0213}
+        scale={0.021}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder025.geometry}
         material={materials.Strings}
-        position={[-0.0589, 0.3528, -0.2349]}
+        position={[-0.059, 0.353, -0.235]}
         rotation={[-Math.PI / 2, 0, 0]}
-        scale={[0.0036, 2.0532, 0.0036]}
+        scale={[0.004, 2.053, 0.004]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder026.geometry}
         material={materials.Strings}
-        position={[-0.1221, 0.3528, -0.2392]}
+        position={[-0.122, 0.353, -0.239]}
         rotation={[-Math.PI / 2, 0, 0]}
-        scale={[0.0038, 2.0532, 0.0038]}
+        scale={[0.004, 2.053, 0.004]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder027.geometry}
         material={materials.Strings}
-        position={[0.0006, 0.3528, -0.2349]}
+        position={[0.001, 0.353, -0.235]}
         rotation={[-Math.PI / 2, 0, 0]}
-        scale={[0.0029, 2.0532, 0.0029]}
+        scale={[0.003, 2.053, 0.003]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder028.geometry}
         material={materials.Strings}
-        position={[0.0461, 0.3528, -0.2349]}
+        position={[0.046, 0.353, -0.235]}
         rotation={[-Math.PI / 2, 0, 0]}
-        scale={[0.0021, 2.0532, 0.0021]}
+        scale={[0.002, 2.053, 0.002]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder029.geometry}
         material={materials.Strings}
-        position={[0.1227, 0.3528, -0.2349]}
+        position={[0.123, 0.353, -0.235]}
         rotation={[-Math.PI / 2, 0, 0]}
-        scale={[0.0021, 2.0532, 0.0021]}
+        scale={[0.002, 2.053, 0.002]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder030.geometry}
         material={materials.Strings}
-        position={[0.1872, 0.3528, -0.2906]}
+        position={[0.187, 0.353, -0.291]}
         rotation={[-Math.PI / 2, 0, 0]}
-        scale={[0.0018, 2.0532, 0.0018]}
+        scale={[0.002, 2.053, 0.002]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder031.geometry}
         material={materials.Screws}
-        position={[-0.4353, 0.2072, 0.5215]}
-        scale={[0.0193, 0.0628, 0.0193]}
+        position={[-0.435, 0.207, 0.522]}
+        scale={[0.019, 0.063, 0.019]}
       />
-      <group position={[0.4685, 0.2864, 1.7538]} scale={[0.0537, 0.0553, 0.0537]}>
+      <group position={[0.469, 0.286, 1.754]} scale={[0.054, 0.055, 0.054]}>
         <mesh
           castShadow
           receiveShadow
@@ -732,24 +731,7 @@ export default function Guitar(props: JSX.IntrinsicElements['group']) {
           material={materials.Rubber}
         />
       </group>
-      <group position={[0.6731, 0.2581, 1.6042]} scale={[0.0537, 0.0553, 0.0537]}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Mesh_25.geometry}
-          material={materials.Screws}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Mesh_26.geometry}
-          material={materials.Rubber}
-        />
-      </group>
-      <group
-        position={[0.5833, 0.1816, 1.326]}
-        rotation={[-1.1425, 0.2113, 0.3319]}
-        scale={[0.0044, 0.093, 0.0153]}>
+      <group position={[0.673, 0.258, 1.604]} scale={[0.054, 0.055, 0.054]}>
         <mesh
           castShadow
           receiveShadow
@@ -760,6 +742,23 @@ export default function Guitar(props: JSX.IntrinsicElements['group']) {
           castShadow
           receiveShadow
           geometry={nodes.Mesh_28.geometry}
+          material={materials.Rubber}
+        />
+      </group>
+      <group
+        position={[0.583, 0.182, 1.326]}
+        rotation={[-1.143, 0.211, 0.332]}
+        scale={[0.004, 0.093, 0.015]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Mesh_25.geometry}
+          material={materials.Screws}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Mesh_26.geometry}
           material={materials.Rubber}
         />
       </group>

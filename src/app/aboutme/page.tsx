@@ -35,8 +35,8 @@ export default function Aboutme() {
 
         <h2 className="text-2xl mt-16 mb-6">Skills</h2>
 
-        <div className="flex flex-row w-full lg:w-full justify-between ">
-          <span className="flex flex-row justify-between w-44 items-center">
+        <div className="flex flex-row flex-wrap w-full lg:w-full justify-between ">
+          <span className="flex flex-row justify-between w-44 items-center p-2">
             <div className="group">
               <Image
                 src={"./java.svg"}
@@ -57,7 +57,7 @@ export default function Aboutme() {
             <div className="rounded-full border-solid border-white border-2 h-5 w-5"></div>
           </span>
 
-          <span className="flex flex-row justify-between w-44 items-center">
+          <span className="flex flex-row justify-between w-44 items-center p-2">
             <div className="group">
               <Image
                 src={"./javascript.svg"}
@@ -78,7 +78,7 @@ export default function Aboutme() {
             <div className="rounded-full border-solid border-white border-2 h-5 w-5"></div>
           </span>
 
-          <span className="flex flex-row justify-between w-44 items-center">
+          <span className="flex flex-row justify-between w-44 items-center p-2">
             <div className="group">
               <Image
                 src={"./python.svg"}
@@ -99,13 +99,13 @@ export default function Aboutme() {
             <div className="rounded-full border-solid border-white border-2 h-5 w-5"></div>
           </span>
 
-          <span className="flex flex-row justify-between w-44 items-center">
+          <span className="flex flex-row justify-between w-44 items-center p-2">
             <div className="group">
               <Image
                 src={"./rust.svg"}
-                height={40}
-                width={40}
-                alt="Java logo"
+                height={45}
+                width={45}
+                alt="Rust logo"
                 className="invert"
               ></Image>
               <span className="group-hover:visible invisible absolute rounded-full shadow-lg p-2 bg-white text-black mb-8">
