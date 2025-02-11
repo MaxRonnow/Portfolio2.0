@@ -50,7 +50,7 @@ export default function Home() {
         <div className="relative left-2 border-solid border-zinc-500 group-hover:border-white [border-width:0_3px_3px_0] h-4 w-4 [transform:rotate(-45deg)] [-webkit-transform:rotate(-45deg)]"></div>
       </button>
 
-      <div className="w-full h-auto absolute top-[88%] right-0 font-title font-thin text-center pointer-events-none">
+      <div className="w-full h-auto absolute top-[88%] right-0 font-title font-thin text-white text-center pointer-events-none">
         {orbitalIndex + 1} / 6
       </div>
 
@@ -58,12 +58,12 @@ export default function Home() {
         <div className="border-solid border-2 border-zinc-500 w-[calc(100%-4rem)] h-[calc(100vh-4rem)] z-10 pointer-events-none"></div>
       </div>
 
-      <p className="absolute font-title font-thin top-10 right-12">
+      <p className="absolute font-title font-thin text-white top-10 right-12">
         n = {orbitals[orbitalIndex][0]} &ensp; l = {orbitals[orbitalIndex][1]}{" "}
         &ensp; m = {orbitals[orbitalIndex][2]}
       </p>
       <div className="absolute top-20 left-14 lg:left-20 max-w-[80vw] h-auto pointer-events-none">
-        <h1 className="text-6xl font-title font-extralight">Max Rönnow</h1>
+        <h1 className="text-6xl font-title font-extralight text-white">Max Rönnow</h1>
       </div>
 
       {/* <div className="h-screen w-full backdrop-blur-lg bg-[#ffffff1d]"></div> */}

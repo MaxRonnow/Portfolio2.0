@@ -38,7 +38,7 @@ export default function RootLayout({
           <div className="fixed h-screen w-full bg-black">
             <Atomview></Atomview>
           </div>
-          <p className="absolute z-40 font-title font-extralight bottom-1 left-5 text-sm">© Max Rönnow 2025</p>  
+          <p className="absolute z-40 font-title font-extralight bottom-1 left-5 text-sm text-white">© Max Rönnow 2025</p>  
           <div className="">
             <NavMenu></NavMenu>
           </div>
