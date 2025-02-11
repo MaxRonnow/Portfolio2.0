@@ -51,7 +51,7 @@ function AtomParticles(props: any) {
           0.05,
         );
 
-        console.log(prob);
+        /* console.log(prob); */
 
         if (Math.random() < prob) {
           positions.set([x, y, z], i * 3);

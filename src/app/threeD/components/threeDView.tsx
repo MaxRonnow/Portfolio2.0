@@ -40,7 +40,7 @@ function ThreeDView() {
             contactShadow={true}
             shadows
             adjustCamera
-            environment={"night"}
+            environment={"city"}
           >
             {cloneElement(models[currentModel], { key: currentModel })}
           </Stage>

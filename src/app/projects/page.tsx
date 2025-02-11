@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Projects() {
   return (
-    <div className="h-screen w-full backdrop-blur-sm flex flex-col items-center font-title font-extralight text-white">
+    <div className="min-h-screen w-full backdrop-blur-sm flex flex-col items-center font-title font-extralight text-white">
       <div className="min-w-10 max-w-[90vw] lg:max-w-[70vw] my-10">
         <div className="my-16">
           <h1 className="text-3xl py-3 my-3">Portfolio page</h1>
@@ -76,7 +76,7 @@ function Projects() {
           <a
             className="group hover:bg-white hover:text-black rounded-full ease-in-out border-solid border-2 border-zinc-500 p-2 my-4 h-auto w-40 flex flex-row justify-evenly"
             rel="noopener noreferrer"
-            href="https://github.com/"
+            href="https://github.com/MaxRonnow/Portfolio2.0"
           >
             <Image
               src={"/github.svg"}

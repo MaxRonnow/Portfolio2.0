@@ -35,7 +35,7 @@ export default function Aboutme() {
 
         <h2 className="text-2xl mt-16 mb-6">Skills</h2>
 
-        <div className="flex flex-row w-full lg:w-[60%] justify-between ">
+        <div className="flex flex-row w-full lg:w-full justify-between ">
           <span className="flex flex-row justify-between w-44 items-center">
             <div className="group">
               <Image
@@ -121,7 +121,7 @@ export default function Aboutme() {
           </span>
         </div>
 
-        <div className="flex flex-row my-10 justify-between items-center lg:w-[35%]">
+        <div className="flex flex-row my-10 justify-between items-center full">
           <div className="group">
             <Image
               src={"./typescript.svg"}
