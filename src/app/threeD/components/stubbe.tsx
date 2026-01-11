@@ -775,6 +775,7 @@ type GLTFResult = GLTF & {
 }
 /* @ts-ignore */
 export default function Stubbe(props: JSX.IntrinsicElements['group']) {
+  /* @ts-ignore */
   const { nodes, materials } = useGLTF('/stubbe.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>

@@ -37,7 +37,7 @@ function ThreeDView() {
           <Stage
             preset={"rembrandt"}
             intensity={1}
-            contactShadow={true}
+            
             shadows
             adjustCamera
             environment={"city"}

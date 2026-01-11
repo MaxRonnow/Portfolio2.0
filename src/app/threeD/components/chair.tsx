@@ -32,6 +32,7 @@ type GLTFResult = GLTF & {
 }
 /* @ts-ignore */
 export default function Chair(props: JSX.IntrinsicElements['group']) {
+  /* @ts-ignore */
   const { nodes, materials } = useGLTF('/chair.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>

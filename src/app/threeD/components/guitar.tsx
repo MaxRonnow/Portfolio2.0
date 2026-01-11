@@ -103,6 +103,7 @@ type GLTFResult = GLTF & {
 }
 /* @ts-ignore */
 export default function Guitar(props: JSX.IntrinsicElements['group']) {
+  /* @ts-ignore */
   const { nodes, materials } = useGLTF('/guitar.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
